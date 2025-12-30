@@ -1,1438 +1,901 @@
-<!--@layout(/layout/basic/layout.html)-->
-<!--@js(/layout/basic/js/main.js)-->
-<!--@css(/layout/basic/css/main.css)-->
-<!--@import(/smart-banner/shop1/smart-banner-admin-RES00008.html)-->
-<section class="section" data-ez-module="html/1" data-ez-name="CUSTOM HTML" data-ez-type="plain" data-ez="contents-05ml1x3-1">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LG U+ 특별 프로모션 랜딩페이지</title>
 
-<style>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1ylh2la-1"><meta charset="utf-8"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1bgf731-1"><meta name="viewport" content="width=device-width, initial-scale=1"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-11m46t6-1"><title>12/22 시세표 · 방문개통/번호이동/기변 · 인터넷 동반혜택</title></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1ruq6ow-1"><meta name="description" content="2025.12.22 기준 휴대폰 시세표 및 부가서비스/유지조건/인터넷 동반혜택 안내 랜딩페이지"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-172heda-1"><style>
+  <!-- 폰트 (HTTPS) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+
+  <style>
+    /* =========================
+      DESIGN SYSTEM
+    ========================= */
     :root{
-      --bg:#f6f7fb;
+      --lgu-pink:#e6007e;
+      --lgu-pink2:#ff3ea6;
+      --text:#101828;
+      --muted:#667085;
+      --bg:#f7f8fb;
       --card:#ffffff;
-      --ink:#111827;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --accent:#2563eb;
-      --accent2:#ef4444;
-      --good:#10b981;
-      --warn:#f59e0b;
-      --bad:#ef4444;
-      /* Carrier Colors */
-      --sk-color: #E60012;
-      --kt-color: #00D1C6;
-      --lg-color: #E6007E;
-
+      --line:rgba(16,24,40,.10);
+      --shadow: 0 12px 28px rgba(16,24,40,.10);
+      --shadow2: 0 8px 18px rgba(16,24,40,.08);
       --radius:16px;
-      --shadow: 0 10px 24px rgba(17,24,39,.08);
-      --shadow2: 0 4px 12px rgba(17,24,39,.08);
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --font: system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0; font-family:var(--font); color:var(--ink); background:linear-gradient(180deg,#eef2ff 0%, var(--bg) 32%, var(--bg) 100%);
-    }
-    a{color:inherit}
-    .wrap{max-width:1100px; margin:0 auto; padding:20px 16px 80px}
-    .topbar{
-      position:sticky; top:0; z-index:40;
-      background:rgba(246,247,251,.85); backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(229,231,235,.8);
-    }
-    .topbar .inner{max-width:1100px; margin:0 auto; padding:10px 16px; display:flex; gap:10px; align-items:center; justify-content:space-between}
-    .brand{display:flex; gap:10px; align-items:center}
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      background: radial-gradient(circle at 30% 30%, #93c5fd 0%, #2563eb 55%, #1d4ed8 100%);
-      box-shadow: var(--shadow2);
-    }
-    .brand h1{margin:0; font-size:15px; line-height:1.2}
-    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
-    .ctaRow{display:flex; gap:8px; align-items:center}
-    .btn{
-      appearance:none; border:1px solid var(--line); background:var(--card);
-      padding:10px 12px; border-radius:999px; font-weight:700; cursor:pointer;
-      box-shadow: 0 1px 0 rgba(17,24,39,.02);
-      display:inline-flex; gap:8px; align-items:center;
-      transition:.15s transform ease, .15s background ease, .15s border-color ease;
-      font-size:13px;
-      text-decoration:none;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:var(--accent); border-color:transparent; color:#fff}
-    .btn.danger{background:#111827; border-color:transparent; color:#fff}
-    .btn .dot{width:10px; height:10px; border-radius:50%; background:currentColor; opacity:.85}
-    .hero{
-      padding:18px 0 10px;
-      display:grid; grid-template-columns: 1.25fr .75fr; gap:14px;
-    }
-    .card{
-      background:var(--card); border:1px solid rgba(229,231,235,.9);
-      border-radius:var(--radius); box-shadow: var(--shadow);
-      padding:16px;
-    }
-    .hero h2{margin:0 0 6px; font-size:20px}
-    .hero .sub{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
-    .pillRow{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-    .pill{
-      padding:7px 10px; border-radius:999px; border:1px solid var(--line);
-      background:#f9fafb; font-size:12px; color:#374151;
-      display:inline-flex; gap:8px; align-items:center;
-    }
-    .pill.interactive{
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .pill.interactive:hover{ transform:translateY(-2px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .pill b{font-family:var(--mono); font-size:12px}
-    .pill.red{border-color: rgba(239,68,68,.25); background: rgba(239,68,68,.06); color:#991b1b}
-    .pill.blue{border-color: rgba(37,99,235,.25); background: rgba(37,99,235,.06); color:#1e3a8a}
-    .pill.green{border-color: rgba(16,185,129,.25); background: rgba(16,185,129,.06); color:#065f46}
-    .quick{
-      display:flex; flex-direction:column; gap:10px;
-    }
-    .quick .mini{
-      padding:12px; border-radius:14px; border:1px solid var(--line);
-      background:linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
-    }
-    .mini h3{margin:0 0 6px; font-size:13px}
-    .mini p{margin:0; font-size:12px; color:var(--muted); line-height:1.55}
-    .mini .badges{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
-    .badge{
-      font-size:11px; padding:5px 8px; border-radius:999px;
-      background:#f3f4f6; border:1px solid var(--line); color:#374151;
-    }
-    .tabs{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 0}
-    .tab{
-      border:1px solid var(--line); background:#fff; color:#111827;
-      padding:9px 12px; border-radius:999px; cursor:pointer; font-weight:800; font-size:13px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
-    }
-    .tab:hover{ transform: translateY(-1px); }
-    .tab[aria-selected="true"]{
-      background: var(--accent-bg, rgba(37,99,235,.09));
-      border-color: var(--accent-border, rgba(37,99,235,.25));
-      color: var(--accent) !important;
+      --radius2:22px;
+      --max:1200px;
     }
 
-    /* Price Emphasis for Carrier Columns (Number Transfer) */
-    /* SK 번이 (col 2), KT 번이 (col 4), LG 번이 (col 6) */
-    /* Using nth-child to be safer with th siblings */
-    #prices tbody td:nth-child(2) { color: var(--sk-color) !important; font-weight: 900; }
-    #prices tbody td:nth-child(4) { color: var(--kt-color) !important; font-weight: 900; }
-    #prices tbody td:nth-child(6) { color: var(--lg-color) !important; font-weight: 900; }
-    .section{margin-top:14px}
-    .sectionHeader{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin:0 0 10px}
-    .sectionHeader h3{margin:0; font-size:16px}
-    .sectionHeader .hint{margin:0; color:var(--muted); font-size:12px}
-    .tableWrap{
-      overflow:auto;
-      border:1px solid var(--line);
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:Pretendard, "Noto Sans KR", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 12% -10%, rgba(230,0,126,.10), transparent 55%),
+        radial-gradient(900px 520px at 92% 10%, rgba(0,126,255,.08), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;height:auto;display:block;}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px;}
+
+    /* =========================
+      TOP PROMO BAR (상단 띠배너)
+    ========================= */
+    .top-promo{
+      background: linear-gradient(90deg, #0b4fd7, #0a7cf4);
+      color:#fff;
+    }
+    .top-promo .container{
+      padding:10px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .top-promo .msg{
+      font-weight:800;
+      letter-spacing:-.02em;
+      font-size:14px;
+      opacity:.95;
+    }
+    .top-promo .mini{
+      font-size:13px;
+      opacity:.9;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      white-space:nowrap;
+    }
+    .top-promo .pill{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.16);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:700;
+    }
+
+    /* =========================
+      HEADER
+    ========================= */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.82);
+      backdrop-filter: blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    header .container{
+      height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:-.03em;
+      font-size:18px;
+    }
+    .logo-badge{
+      width:34px;height:34px;border-radius:12px;
+      background: linear-gradient(135deg, var(--lgu-pink), #6a5cff);
+      box-shadow: 0 10px 22px rgba(230,0,126,.18);
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    nav a{
+      padding:10px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:14px;
+    }
+    nav a:hover{
+      background:rgba(16,24,40,.05);
+      color:var(--text);
+    }
+
+    .header-cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    /* =========================
+      BUTTONS
+    ========================= */
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 18px;
       border-radius:14px;
+      border:1px solid var(--line);
+      background:#fff;
+      color:var(--text);
+      font-weight:800;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      box-shadow: var(--shadow2);
+      background:#fbfbfd;
+    }
+    .btn.primary{
+      border:none;
+      color:#fff;
+      background: linear-gradient(135deg, var(--lgu-pink), var(--lgu-pink2));
+      box-shadow: 0 12px 26px rgba(230,0,126,.22);
+    }
+    .btn.primary:hover{
+      box-shadow: 0 16px 34px rgba(230,0,126,.26);
+    }
+    .btn.ghost{
+      background:rgba(230,0,126,.08);
+      border:1px solid rgba(230,0,126,.18);
+      color:var(--lgu-pink);
+    }
+
+    /* =========================
+      HERO
+    ========================= */
+    .hero-section{
+      position:relative;
+      width:100%;
+      margin-top:16px;
+    }
+    .hero-wrap{
+      position:relative;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border:1px solid var(--line);
+      background:#eef2ff;
+    }
+    .hero-image-placeholder{
+      width:100%;
+      height:640px;
+      object-fit:cover;
+      filter:saturate(1.05) contrast(1.03);
+      transform: scale(1.02);
+    }
+    .hero-overlay{
+      position:absolute; inset:0;
+      background:
+        linear-gradient(90deg, rgba(16,24,40,.62) 0%, rgba(16,24,40,.30) 55%, rgba(16,24,40,.10) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.22) 100%);
+    }
+    .hero-text{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      text-align:center;
+      color:#fff;
+      width:92%;
+      max-width:860px;
+      text-shadow: 0 10px 26px rgba(0,0,0,.35);
+    }
+    .hero-text .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.18);
+      font-weight:800;
+      font-size:13px;
+      margin-bottom:14px;
+    }
+    .hero-text h1{
+      font-size: clamp(28px, 3.6vw, 52px);
+      line-height:1.1;
+      margin-bottom:14px;
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+    .hero-text p{
+      font-size: clamp(14px, 1.3vw, 18px);
+      opacity:.95;
+      margin-bottom:22px;
+    }
+    .hero-actions{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    /* =========================
+      SECTIONS COMMON
+    ========================= */
+    .section{
+      padding:80px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:26px;
+    }
+    .section-title{
+      font-size: clamp(22px, 2.2vw, 34px);
+      letter-spacing:-.03em;
+      font-weight:900;
+    }
+    .section-desc{
+      color:var(--muted);
+      margin-top:8px;
+      font-size:15px;
+      max-width:720px;
+    }
+
+    /* =========================
+      FEATURES
+    ========================= */
+    .features-section{background:transparent;}
+    .feature-item{
+      display:flex;
+      align-items:center;
+      gap:42px;
+      margin-bottom:56px;
+      padding:22px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.72);
+      border:1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(16,24,40,.06);
+    }
+    .feature-item:nth-child(even){flex-direction: row-reverse;}
+    .feature-image{
+      flex:1;
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      border:1px solid rgba(0,0,0,.06);
       background:#fff;
     }
-    table{
-      border-collapse:separate; border-spacing:0;
+    .feature-image img{
       width:100%;
-      min-width:860px;
-      font-size:13px;
+      height:360px;
+      object-fit:cover;
     }
-    thead th{
-      position:sticky; top:0; z-index:2;
-      background:#f9fafb;
-      border-bottom:1px solid var(--line);
-      padding:12px 10px;
-      text-align:center;
-      white-space:nowrap;
-    }
-    tbody td, tbody th{
-      border-bottom:1px solid var(--line);
-      padding:11px 10px;
-      text-align:center;
-      white-space:nowrap;
-    }
-    tbody tr:last-child td, tbody tr:last-child th{border-bottom:0}
-    tbody th{
-      text-align:left; font-weight:900;
-      background:#fcfcfd;
-    }
-    .kpi{
-      font-family:var(--mono);
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-    .kpi.neg{color:var(--bad)}
-    .kpi.pos{color:#111827}
-    .kpi.zero{color:var(--muted)}
-    .na{
-      color:#9ca3af;
-      font-style:italic;
+    .feature-text{flex:1;}
+    .feature-kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(230,0,126,.08);
+      border:1px solid rgba(230,0,126,.16);
+      color:var(--lgu-pink);
+      font-weight:800;
       font-size:12px;
+      margin-bottom:10px;
     }
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-    details{
-      border:1px solid var(--line); border-radius:14px; background:#fff;
-      overflow:hidden;
-    }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      padding:14px 14px;
+    .feature-text h2{
+      font-size: clamp(18px, 2.0vw, 28px);
+      margin-bottom:12px;
+      letter-spacing:-.03em;
       font-weight:900;
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      background:linear-gradient(180deg,#fff 0%, #fafafa 100%);
     }
-    summary::-webkit-details-marker{display:none}
-    .detailsBody{padding:0 14px 14px}
-    .detailsBody p{margin:10px 0 0; color:#374151; font-size:13px; line-height:1.6}
-    .detailsBody ul{margin:10px 0 0; padding-left:18px; color:#374151; font-size:13px; line-height:1.7}
-    .callout{
-      border-radius:14px;
-      background: rgba(245,158,11,.08);
-      border:1px solid rgba(245,158,11,.25);
-      padding:12px 12px;
-      color:#92400e;
-      font-size:13px;
-      line-height:1.6;
-    }
-    .callout strong{color:#78350f}
-    .foot{
-      margin-top:14px;
+    .feature-text p{
       color:var(--muted);
-      font-size:12px;
-      line-height:1.6;
+      font-size:15px;
+      margin-bottom:16px;
+      line-height:1.7;
     }
-    .footerCta{
-      margin-top:14px;
-      display:flex; gap:10px; flex-wrap:wrap;
+    .feature-link{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-weight:900;
+      color:var(--lgu-pink);
+      padding:10px 12px;
+      border-radius:12px;
+      background:rgba(230,0,126,.06);
+      border:1px solid rgba(230,0,126,.12);
+      transition: transform .2s ease;
     }
-    .copyBtn{border:1px dashed rgba(37,99,235,.35); background:rgba(37,99,235,.06); color:#1e3a8a}
-    .toast{
-      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
-      background:#111827; color:#fff;
-      padding:10px 12px; border-radius:999px;
-      font-size:12px; opacity:0; pointer-events:none;
-      transition:.18s opacity ease, .18s transform ease;
-      box-shadow: var(--shadow2);
-      z-index:99;
+    .feature-link:hover{transform: translateY(-1px);}
+
+    /* =========================
+      MID BANNER
+    ========================= */
+    .mid-banner-section{
+      padding:0;
+      margin:0 0 10px;
     }
-    .toast.show{opacity:1; transform:translateX(-50%) translateY(-6px)}
-    @media (max-width: 920px){
-      .hero{grid-template-columns: 1fr}
-      table{min-width:780px}
-      .grid2{grid-template-columns: 1fr}
+    .mid-banner-wrap{
+      border-radius: var(--radius2);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border:1px solid var(--line);
+      background:#fff;
     }
-  </style></div>
-<div class="topbar" data-ez="module-1hx9b6h-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
-    <div class="inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>12/22 시세표 · 방문개통/번호이동/기변</h1>
-          <p>가격표 + 부가서비스 + 유지조건 + 인터넷 동반혜택</p>
-        </div>
-      </div>
-      <div class="ctaRow">
-        <!-- ✅ 여기에 카톡/전화 링크를 교체하세요 -->
-        <a class="btn primary" href="http://pf.kakao.com/_bFhTM/chat" target="_blank" rel="noopener">
-          <span class="dot"></span> 카톡상담
-        </a>
-        <a class="btn danger" href="#policy">
-          <span class="dot"></span> 조건/주의
-        </a>
-      </div>
-    </div>
-  </div>
-<div class="wrap" data-ez="module-1om3949-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="card">
-        <h2>오늘 조건 한눈에 보기</h2>
-        <p class="sub">
-          아래 표는 <b>숫자(단위: 만원)</b> 기준으로 정리되어 있으며, <b>블랙(공란)</b> 영역은 진행/재고/조건 상 <b>불가</b> 또는 <b>미오픈</b> 항목입니다.
-          <br>※ 표와 실제 진행 조건이 상이할 경우, <b>상담 확정 조건</b>이 우선입니다.
-        </p>
-
-        <div class="pillRow">
-          <span class="pill blue">기준일 <b>2025-12-23</b></span>
-          <span class="pill interactive" onclick="setTheme('sk')">SK <b>109</b>요금</span>
-          <span class="pill interactive" onclick="setTheme('kt')">KT <b>110</b>요금</span>
-          <span class="pill interactive" onclick="setTheme('lg')">LG <b>115</b>요금</span>
-          <span class="pill red">긴급스팟: 마감 예정 없음(변동)</span>
-          <span class="pill green">인터넷 동반 시 지원금 별도</span>
-        </div>
-
-        <div class="footerCta">
-          <button class="btn copyBtn" id="copyAll">전체 표 링크/요약 복사</button>
-          <a class="btn" href="#prices">시세표 보기</a>
-          <a class="btn" href="#internet">인터넷 동반혜택</a>
-          <a class="btn" href="#addons">부가서비스</a>
-        </div>
-
-        <p class="foot">
-          * “선약 진행 시 구매가에 공시 금액만큼 더해주시면 됩니다 ^^” (아이폰17 표 하단 문구 반영)
-        </p>
-      </div>
-
-      <div class="quick">
-        <div class="mini">
-          <h3>📌 꼭 확인</h3>
-          <p>
-            유지기간 위반/미사용/비정상 판정 시 <b>출고가 재청구</b>가 발생할 수 있습니다.
-            방문 전 <b>신분증</b> 및 (미성년자) <b>서류</b>를 준비해주세요.
-          </p>
-          <div class="badges">
-            <span class="badge">유심기변/기변 제한</span>
-            <span class="badge">회선/요금제 유지</span>
-            <span class="badge">데이터/통화 기준</span>
-          </div>
-        </div>
-
-        <div class="mini">
-          <h3>⚡ 빠른 상담 체크리스트</h3>
-          <p>
-            ① 통신사(현재) ② 번호이동/기변 ③ 모델/용량 ④ 요금제 가능 여부 ⑤ 부가서비스 가능 여부
-          </p>
-          <div class="badges">
-            <span class="badge">현재 통신사</span>
-            <span class="badge">개통유형</span>
-            <span class="badge">원하는 모델</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 탭 -->
-    <div class="tabs" role="tablist" aria-label="시세표 탭">
-      <button class="tab" role="tab" aria-selected="true" data-target="tab-prices">휴대폰 시세표</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-internet">인터넷 동반혜택</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-addons">부가서비스 안내</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-policy">긴급스팟/유지조건</button>
-    </div>
-
-    <!-- ================== TAB: PRICES ================== -->
-    <div class="section card" id="prices" data-tab="tab-prices">
-      <div class="sectionHeader">
-        <h3>휴대폰 시세표 (단위: 만원)</h3>
-        <p class="hint">모바일에서는 좌우 스크롤로 확인</p>
-      </div>
-
-      <!-- 갤럭시 S25 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>갤럭시 S25</h3>
-          <p class="hint">SK(109) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>S25 256</th>
-                <td class="kpi pos">2</td><td class="kpi pos">7</td>
-                <td class="kpi neg">-11</td><td class="kpi neg">-21</td>
-                <td class="kpi neg">-22</td><td class="kpi neg">-4</td>
-              </tr>
-              <tr><th>S25+ 256</th>
-                <td class="kpi pos">21</td><td class="kpi pos">26</td>
-                <td class="kpi pos">8</td><td class="kpi pos">22</td>
-                <td class="kpi neg">-2</td><td class="kpi pos">15</td>
-              </tr>
-              <tr><th>S25 울트라 256</th>
-                <td class="kpi pos">56</td><td class="kpi pos">61</td>
-                <td class="kpi pos">45</td><td class="kpi pos">42</td>
-                <td class="kpi pos">32</td><td class="kpi pos">50</td>
-              </tr>
-              <tr><th>S25 엣지 256</th>
-                <td class="kpi pos">26</td><td class="kpi pos">26</td>
-                <td class="kpi pos">10</td><td class="kpi neg">-8</td>
-                <td class="kpi pos">1</td><td class="kpi pos">20</td>
-              </tr>
-              <tr><th>S25 엣지 512</th>
-                <td class="kpi pos">40</td><td class="kpi pos">40</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">16</td><td class="kpi pos">34</td>
-              </tr>
-              <tr><th>S25 FE 256</th>
-                <td class="kpi neg">-12</td><td class="kpi neg">-6</td>
-                <td class="kpi neg">-22</td><td class="kpi neg">-17</td>
-                <td class="kpi pos">4</td><td class="kpi pos">7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 아이폰 16 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>아이폰 16 (SK는 선약 표기)</h3>
-          <p class="hint">단위: 만원 · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금 · 선약)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>아이폰16 128</th>
-                <td class="kpi pos">55</td><td class="kpi pos">71</td>
-                <td class="kpi neg">-19</td><td class="kpi pos">13</td>
-                <td class="kpi neg">-22</td><td class="kpi pos">23</td>
-              </tr>
-              <tr><th>아이폰16 256</th>
-                <td class="kpi pos">71</td><td class="kpi pos">87</td>
-                <td class="kpi neg">-6</td><td class="kpi pos">27</td>
-                <td class="kpi neg">-5</td><td class="kpi pos">39</td>
-              </tr>
-              <tr><th>아이폰16 PRO 128</th>
-                <td class="kpi pos">85</td><td class="kpi pos">90</td>
-                <td class="kpi pos">15</td><td class="kpi pos">44</td>
-                <td class="kpi pos">9</td><td class="kpi pos">53</td>
-              </tr>
-              <tr><th>아이폰16 PRO 256</th>
-                <td class="kpi pos">103</td><td class="kpi pos">117</td>
-                <td class="kpi pos">30</td><td class="kpi pos">59</td>
-                <td class="kpi pos">24</td><td class="kpi pos">68</td>
-              </tr>
-              <tr><th>아이폰16 PRO 512</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">58</td><td class="kpi pos">87</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>아이폰16 PRO MAX 256</th>
-                <td class="kpi pos">120</td><td class="kpi pos">125</td>
-                <td class="kpi pos">48</td><td class="kpi pos">77</td>
-                <td class="kpi pos">44</td><td class="kpi pos">88</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 폴더블 6 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>폴더블 6</h3>
-          <p class="hint">단위: 만원 · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>플립6 256</th>
-                <td class="kpi pos">25</td><td class="kpi pos">56</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">34</td><td class="kpi pos">30</td>
-              </tr>
-              <tr><th>폴드6 256</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">50</td><td class="kpi pos">81</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 갤럭시 S24류 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>갤럭시 S24류</h3>
-          <p class="hint">S24 FE는 “KT 61K 요금제 기준” 표기</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>S24+ 256</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi neg">-36</td><td class="kpi neg">-2</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>S24 울트라 256</th>
-                <td class="kpi pos">9</td><td class="kpi pos">25</td>
-                <td class="kpi neg">-6</td><td class="kpi pos">27</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>S24 FE (KT 61K 요금제 기준)</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi neg">-18</td><td class="kpi pos">1</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 중/저가형 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>중·저가형 모델</h3>
-          <p class="hint">SK(선약 33) / KT(선약 61) / LG(공시 47)</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (선약 33요금)</th>
-                <th colspan="2">KT (선약 61요금)</th>
-                <th colspan="2">LG (공시 47요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>A17</th>
-                <td class="kpi neg">-13</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-9</td><td class="kpi neg">-6</td>
-              </tr>
-              <tr><th>A566 (퀀텀6) (39K)</th>
-                <td class="kpi pos">12</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M166 (와이드8)</th>
-                <td class="kpi zero">0</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A366 (A36) (SK 39K)</th>
-                <td class="kpi zero">0</td><td class="na">—</td>
-                <td class="kpi pos">8</td><td class="kpi pos">8</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M366 (점프4)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi pos">3</td><td class="kpi pos">3</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A166 (버디4)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-30</td><td class="kpi neg">-15</td>
-              </tr>
-              <tr><th>A165 (A16) (SK 33K · KT 37K)</th>
-                <td class="kpi neg">-14</td><td class="na">—</td>
-                <td class="kpi neg">-1</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 키즈폰 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>키즈폰</h3>
-          <p class="hint">SK(19 선약) / KT(27 선약) / LG(29 공시) · 신규/번이</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (19 선약)</th>
-                <th colspan="2">KT (27 선약)</th>
-                <th colspan="2">LG (29 공시)</th>
-              </tr>
-              <tr>
-                <th>신규</th><th>번이</th>
-                <th>신규</th><th>번이</th>
-                <th>신규</th><th>번이</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>A17 ZEM 포켓폰</th>
-                <td class="kpi neg">-13</td><td class="kpi pos">8</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M130 (사나모롤폰)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-14</td><td class="kpi neg">-6</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A17 폼폼푸린 키즈폰</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-5</td><td class="kpi zero">0</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M150 (포켓몬에디션3)</th>
-                <td class="kpi neg">-17</td><td class="kpi neg">-5</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A165 (무너에디션)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-24</td><td class="kpi pos">9</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="callout" style="margin-top:12px">
-        <strong>표 해석 팁</strong><br>
-        • 숫자는 만원 단위로 표기되어 있습니다. <br>
-        • “불가/미오픈”은 재고/정책/조건에 따라 진행이 어려운 영역입니다. (상담으로 최종 확인)
-      </div>
-    </div>
-
-    <!-- ================== TAB: INTERNET ================== -->
-    <div class="section card" id="internet" data-tab="tab-internet" style="display:none">
-      <div class="sectionHeader">
-        <h3>인터넷 동반혜택 (유선 상품 지원금 · 상품권 포함 · 최대기준)</h3>
-        <p class="hint">※ 휴대폰과 동시가입 시 인터넷/TV 지원금이며, 휴대폰 가격표는 별도</p>
-      </div>
-
-      <div class="tableWrap">
-        <table style="min-width:760px">
-          <thead>
-            <tr>
-              <th>통신사</th>
-              <th>결합 구성</th>
-              <th>유형</th>
-              <th>지원금(만원)</th>
-              <th>비고</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>SK</th>
-              <td>폰+500M+BTV ALL</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-              <td rowspan="6" style="text-align:left; color:var(--muted); font-size:12px; line-height:1.5">
-                재약정 문의 가능<br>
-                (상담 시 조건 확인)
-              </td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>폰+500M+BTV 스탠다드+</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>폰+500M+TV(에센스)</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>폰+500M+TV(베이직)</td>
-              <td>번호이동</td>
-              <td class="kpi pos">60</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰+500M+프리미엄환승구독</td>
-              <td>번호이동</td>
-              <td class="kpi pos">85</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰+500M+프리미엄 VOD</td>
-              <td>번호이동</td>
-              <td class="kpi pos">85</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="section" style="margin-top:16px">
-        <div class="sectionHeader">
-          <h3>아이폰 17 (단위: 만원)</h3>
-          <p class="hint">SK(109·선약) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금 · 선약)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>아이폰17 256</th>
-                <td class="kpi pos">73</td><td class="kpi pos">93</td>
-                <td class="kpi pos">9</td><td class="kpi pos">18</td>
-                <td class="kpi neg">-2</td><td class="kpi pos">23</td>
-              </tr>
-              <tr><th>아이폰17 512</th>
-                <td class="kpi pos">102</td><td class="kpi pos">122</td>
-                <td class="kpi pos">38</td><td class="kpi pos">46</td>
-                <td class="kpi pos">27</td><td class="kpi pos">52</td>
-              </tr>
-              <tr><th>아이폰 Air 256</th>
-                <td class="kpi pos">95</td><td class="kpi pos">102</td>
-                <td class="kpi pos">42</td><td class="kpi pos">49</td>
-                <td class="kpi pos">27</td><td class="kpi pos">52</td>
-              </tr>
-              <tr><th>아이폰 Air 512</th>
-                <td class="kpi pos">125</td><td class="kpi pos">132</td>
-                <td class="kpi pos">72</td><td class="kpi pos">79</td>
-                <td class="kpi pos">57</td><td class="kpi pos">82</td>
-              </tr>
-              <tr><th>아이폰17 PRO 256</th>
-                <td class="kpi pos">117</td><td class="kpi pos">123</td>
-                <td class="kpi pos">62</td><td class="kpi pos">69</td>
-                <td class="kpi pos">47</td><td class="kpi pos">72</td>
-              </tr>
-              <tr><th>아이폰17 PRO 512</th>
-                <td class="kpi pos">148</td><td class="kpi pos">154</td>
-                <td class="kpi pos">93</td><td class="kpi pos">100</td>
-                <td class="kpi pos">78</td><td class="kpi pos">103</td>
-              </tr>
-              <tr><th>아이폰17 PRO 1T</th>
-                <td class="kpi pos">178</td><td class="kpi pos">184</td>
-                <td class="kpi pos">123</td><td class="kpi pos">130</td>
-                <td class="kpi pos">108</td><td class="kpi pos">133</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 256</th>
-                <td class="kpi pos">137</td><td class="kpi pos">143</td>
-                <td class="kpi pos">107</td><td class="kpi pos">114</td>
-                <td class="kpi pos">101</td><td class="kpi pos">116</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 512</th>
-                <td class="kpi pos">168</td><td class="kpi pos">174</td>
-                <td class="kpi pos">138</td><td class="kpi pos">145</td>
-                <td class="kpi pos">132</td><td class="kpi pos">147</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 1T</th>
-                <td class="kpi pos">198</td><td class="kpi pos">203</td>
-                <td class="kpi pos">167</td><td class="kpi pos">174</td>
-                <td class="kpi pos">162</td><td class="kpi pos">177</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="foot">
-          * 선약 진행 시 구매가에 공시 금액만큼 더해주시면 됩니다 ^^
-        </p>
-      </div>
-
-      <div class="section" style="margin-top:16px">
-        <div class="sectionHeader">
-          <h3>갤럭시 폴더블 7 (단위: 만원)</h3>
-          <p class="hint">SK(109) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>플립7 256</th>
-                <td class="kpi pos">20</td><td class="kpi pos">28</td>
-                <td class="kpi pos">12</td><td class="kpi neg">-1</td>
-                <td class="kpi zero">0</td><td class="kpi neg">-8</td>
-              </tr>
-              <tr><th>플립7 512</th>
-                <td class="kpi pos">35</td><td class="kpi pos">40</td>
-                <td class="kpi pos">27</td><td class="kpi pos">14</td>
-                <td class="kpi pos">15</td><td class="kpi pos">7</td>
-              </tr>
-              <tr><th>플립7 FE (KT 90K 요금제)</th>
-                <td class="kpi pos">48</td><td class="kpi pos">55</td>
-                <td class="kpi pos">57</td><td class="kpi pos">63</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>폴드7 256</th>
-                <td class="kpi pos">112</td><td class="kpi pos">103</td>
-                <td class="kpi pos">111</td><td class="kpi pos">98</td>
-                <td class="kpi pos">98</td><td class="kpi pos">90</td>
-              </tr>
-              <tr><th>폴드7 512</th>
-                <td class="kpi pos">128</td><td class="kpi pos">128</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">123</td><td class="kpi pos">161</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- ================== TAB: ADDONS ================== -->
-    <div class="section card" id="addons" data-tab="tab-addons" style="display:none">
-      <div class="sectionHeader">
-        <h3>부가서비스 안내</h3>
-        <p class="hint">표는 “각 통신사 별 부가서비스 리스트업”이며 실제 가입 항목은 유형별 상이</p>
-      </div>
-
-      <div class="callout">
-        상담 시 반드시 문의 바랍니다. <strong>표 내 리스트 외 부가서비스 가입은 없습니다.</strong>
-      </div>
-
-      <div class="tableWrap" style="margin-top:12px">
-        <table style="min-width:980px">
-          <thead>
-            <tr>
-              <th>통신사</th>
-              <th>부가서비스 항목 (기종 별 상이·최대항목)</th>
-              <th>인증</th>
-              <th>월요금</th>
-              <th>유지기간</th>
-              <th>부가 미가입 시 시세표 추가금</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>SK</th>
-              <td>우주패스</td>
-              <td>O</td>
-              <td>13,900원 or 무료</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>마이스마트콜 3</td>
-              <td>X</td>
-              <td>3,500원</td>
-              <td>M+1 (당월+1개월)</td>
-              <td>+2 추가</td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>보험(파손)</td>
-              <td>X</td>
-              <td>5,300 ~ 8,300</td>
-              <td>M+2 (당월+2개월)</td>
-              <td>+2 추가</td>
-            </tr>
-
-            <tr>
-              <th>KT</th>
-              <td>필수팩 L or M</td>
-              <td>X</td>
-              <td>6,900 ~ 9,900</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+7 추가</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>365 폰케어 보험(파손~고급)</td>
-              <td>X</td>
-              <td>5,900 ~ 14,000</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+2 추가</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>OTT구독+스타벅스</td>
-              <td>X</td>
-              <td>13,900원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-
-            <tr>
-              <th>LG</th>
-              <td>유플레이 프리미엄</td>
-              <td>X</td>
-              <td>15,400원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+7 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>모두의할인팩</td>
-              <td>X</td>
-              <td>11,000원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>V컬러링 음악감상 플러스</td>
-              <td>X</td>
-              <td>8,800원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+6 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>듀얼번호</td>
-              <td>X</td>
-              <td>3,300원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+1 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰 교체패스 150~300</td>
-              <td>X</td>
-              <td>9,990원 ~ 15,990원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+6 추가</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="foot">
-        * 실제 가입되는 부가서비스는 표 내에서 유형/모델별로 상이합니다. 상담 시 확정 안내드립니다.
-      </p>
-    </div>
-
-    <!-- ================== TAB: POLICY ================== -->
-    <div class="section card" id="policy" data-tab="tab-policy" style="display:none">
-      <div class="sectionHeader">
-        <h3>긴급스팟 · 퀀텀 스팟 정책 세부 (퀀텀6 방문개통 · 신도림점)</h3>
-        <p class="hint">마감 예정 없음(변동 가능) · 실사용 목적 필수</p>
-      </div>
-
-      <div class="grid2">
-        <details open>
-          <summary>
-            1) 개통 기본 조건
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li><b>실제 사용이 아닌 경우 불가</b></li>
-              <li><b>번호이동</b>: 타통신사 → SKT</li>
-              <li>기존통신사 <b>3개월 미만</b> 중립 불가</li>
-              <li>전월 기준 <b>SKT 해지 이력</b> 존재 시 개통 불가</li>
-              <li>약정: 선택약정 <b>12개월</b> 또는 <b>24개월</b></li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            2) 부가서비스 / 추가지원금 / 사은품
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>부가서비스(당월 유지): 우주패스(올영/스벅), 마이스마트콜3, T올케어플러스</li>
-              <li>부가 미가입 시: 항목당 +2만원, 총 추가금 5만원</li>
-              <li>추가지원금: 추지 설정 20만 설정 시 -7 / 미설정 -2</li>
-              <li>꽃배달: 익월 말일 ~ 익익월 초 순차 배달</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            3) 요금제/유지기간 (위반 시 출고가 재청구)
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>가능 요금제: 베이직플러스59 / 청년59 이상 / 키즈 젬플랜퍼펙트36</li>
-              <li>요금제 유지기간: <b>M+3개월(총 4개월)</b></li>
-              <li>추가지원 설정 시: <b>183일 이후</b> 42,000원 이상으로 변경 가능</li>
-              <li>회선 유지기간: <b>M+5개월</b></li>
-              <li><b>요금제/유지기간 위반 시 출고가격 단말기 재청구</b></li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            4) 금지사항 / 사용량 기준 / 청구 조건
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <div class="callout">
-              <strong>하루라도 위반 시</strong> 출고가+@ 청구될 수 있습니다.
-            </div>
-            <ul>
-              <li>유지기간 내: 유심기변/기변/번호이동/해지/일시정지 불가</li>
-              <li>유심 탈착 후 기기판매, 깡, 보이스피싱, 스팸문자 등 사회통념상 위반 행위 금지</li>
-              <li>M+5개월 내 사용량 기준:
-                <ul>
-                  <li>데이터: 매월 500MB 이상</li>
-                  <li>통화: 매월 30분 + 100콜 이상</li>
-                </ul>
-              </li>
-              <li>기준 미충족/미사용/비정상 판정 시: <b>출고가 618,200원 + 배상금@</b> 청구 가능</li>
-              <li>M+5개월 이후 번호이동 가능</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-
-      <div class="section" style="margin-top:12px">
-        <details>
-          <summary>
-            5) 방문 준비물
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>방문 시: <b>신분증 지참</b></li>
-              <li>미성년자: 가족관계증명서, 법정대리인 신분증, 기본증명서 지참</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-
-      <p class="foot">
-        * 본 페이지는 “가격표 + 조건”을 보기 쉽게 재정리한 것이며, 최종 진행 조건은 상담 확정 기준으로 안내됩니다.
-      </p>
-    </div>
-
-    <div class="card" style="margin-top:14px">
-      <div class="sectionHeader">
-        <h3>바로 상담하기</h3>
-        <p class="hint">아래 버튼 링크만 교체하면 끝</p>
-      </div>
-      <div class="footerCta">
-        <!-- ✅ 교체: 카카오 채널 / 오픈채팅 / 전화 -->
-        <a class="btn primary" href="http://pf.kakao.com/_bFhTM/chat" target="_blank" rel="noopener"><span class="dot"></span> 카톡상담</a>
-        <a class="btn" href="tel:0507-1489-8211"><span class="dot"></span> 전화하기</a>
-        <a class="btn" href="#prices"><span class="dot"></span> 시세표로</a>
-      </div>
-      <p class="foot">
-        상담 문의 시 아래 정보를 함께 보내주시면 빠릅니다: <br>
-        ① 현재통신사 ② 번호이동/기변 ③ 모델/용량 ④ 선약/공시 선호 ⑤ 부가서비스 가능 여부
-      </p>
-    </div>
-  </div>
-<div class="toast" id="toast" data-ez="contents-15hlnjh-1">복사 완료!</div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-0t06wev-1"><script>
-    // 탭 전환
-    const tabs = Array.from(document.querySelectorAll('.tab'));
-    const panels = Array.from(document.querySelectorAll('[data-tab]'));
-
-    function activate(targetId){
-      tabs.forEach(t => {
-        const on = t.dataset.target === targetId;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      panels.forEach(p => {
-        p.style.display = (p.dataset.tab === targetId) ? '' : 'none';
-      });
-      // 스크롤 위치 보정(상단바 높이만큼)
-      const topbar = document.querySelector('.topbar');
-      const y = window.scrollY;
-      window.scrollTo({ top: y - (topbar?.offsetHeight || 0), behavior:'instant' });
-    }
-    tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.target)));
-
-    // 전체 요약 복사
-    function toast(msg){
-      const el = document.getElementById('toast');
-      el.textContent = msg;
-      el.classList.add('show');
-      setTimeout(() => el.classList.remove('show'), 1300);
-    }
-
-    document.getElementById('copyAll')?.addEventListener('click', async () => {
-      const url = location.href.split('#')[0];
-      const text =
-`[12/22 시세표 랜딩]
-- 페이지: ${url}
-- 섹션: 휴대폰 시세표 / 인터넷 동반혜택 / 부가서비스 / 긴급스팟 유지조건
-- 문의 시: 현재통신사, 번이/기변, 모델/용량, 선약/공시, 부가서비스 가능 여부를 함께 전달해주세요.`;
-      try{
-        await navigator.clipboard.writeText(text);
-        toast('요약 복사 완료!');
-      }catch(e){
-        // fallback
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        toast('요약 복사 완료!');
-      }
-    });
-
-    // Theme Switcher
-    function setTheme(carrier) {
-      const root = document.documentElement;
-      const theme = {
-        sk: { color: '#E60012', bg: 'rgba(230, 0, 18, 0.15)', border: 'rgba(230, 0, 18, 0.3)' },
-        kt: { color: '#00D1C6', bg: 'rgba(0, 209, 198, 0.15)', border: 'rgba(0, 209, 198, 0.3)' },
-        lg: { color: '#E6007E', bg: 'rgba(230, 0, 126, 0.15)', border: 'rgba(230, 0, 126, 0.3)' }
-      };
-
-      const t = theme[carrier];
-      if (t) {
-        root.style.setProperty('--accent', t.color);
-        root.style.setProperty('--accent-bg', t.bg);
-        root.style.setProperty('--accent-border', t.border);
-
-        // Also update the static CSS variables for table coloring if we want them to follow theme?
-        // No, the requirement is "Price emphasis: Num Transfer price with carrier color".
-        // This implies SK is always Red, KT always Mint in the table.
-        // So we don't change --sk-color etc.
-
-        toast(carrier.toUpperCase() + ' 테마 적용 완료');
-      }
-    }
-  </script></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-00sdlfb-1"><style>
-  :root{
-    --ink:#111827;
-    --muted:#6b7280;
-    --line:#e5e7eb;
-    --blue:#2563eb;
-    --dark:#111827;
-    --shadow:0 14px 34px rgba(17,24,39,.18);
-  }
-  body.modal-open{ overflow:hidden; }
-
-  /* ===== Floating FAB ===== */
-  .fabWrap{
-    position:fixed;
-    right:16px;
-    bottom:16px;
-    z-index:9998;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    align-items:flex-end;
-  }
-  .fabBtn{
-    appearance:none;
-    border:0;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:12px 14px;
-    border-radius:999px;
-    color:#fff;
-    box-shadow: var(--shadow);
-    font-weight:900;
-    font-size:14px;
-    line-height:1;
-    text-decoration:none;
-    transform: translateZ(0);
-  }
-  .fabBtn small{
-    font-weight:800;
-    opacity:.92;
-    font-size:12px;
-  }
-  .fabBtn .ico{
-    width:34px; height:34px;
-    border-radius:999px;
-    background:rgba(255,255,255,.18);
-    display:grid; place-items:center;
-    font-size:16px;
-  }
-  .fabBtn.kakao{ background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%); }
-  .fabBtn.visit{ background: linear-gradient(180deg, #1f2937 0%, #111827 100%); }
-
-  @media (max-width:520px){
-    .fabWrap{ right:12px; bottom:12px; }
-    .fabBtn{ padding:12px 12px; }
-    .fabBtn span.label{ display:none; } /* 모바일에서는 라벨 숨겨 깔끔하게 */
-  }
-
-  /* ===== Modal ===== */
-  .modalOverlay{
-    position:fixed; inset:0;
-    z-index:9999;
-    background:rgba(17,24,39,.62);
-    display:none;
-    padding:18px;
-    backdrop-filter: blur(6px);
-  }
-  .modalOverlay.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .modalBox{
-    width:min(980px, 100%);
-    max-height:min(92vh, 820px);
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow: 0 24px 60px rgba(0,0,0,.28);
-    display:flex;
-    flex-direction:column;
-  }
-  .modalHeader{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    padding:12px 12px;
-    border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg,#fff 0%, #fafafa 100%);
-  }
-  .mhLeft{ display:flex; flex-direction:column; gap:2px; }
-  .modalTitle{ margin:0; font-size:14px; font-weight:900; color:var(--ink); }
-  .modalSub{ margin:0; font-size:12px; color:var(--muted); }
-
-  .mhRight{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
-  .miniBtn{
-    appearance:none;
-    border:1px solid var(--line);
-    background:#fff;
-    padding:8px 10px;
-    border-radius:999px;
-    font-weight:900;
-    font-size:12px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    color:var(--ink);
-  }
-  .miniBtn.primary{
-    border-color: rgba(37,99,235,.25);
-    background: rgba(37,99,235,.08);
-    color:#1e3a8a;
-  }
-  .miniBtn.close{
-    background:#fff;
-  }
-  .miniBtn:active{ transform: translateY(1px); }
-
-  .modalBody{
-    flex:1;
-    background:#fff;
-  }
-  .modalFrame{
-    width:100%;
-    height:100%;
-    border:0;
-    display:block;
-  }
-
-  /* ===== Mobile fullscreen modal ===== */
-  @media (max-width:520px){
-    .modalOverlay{ padding:0; }
-    .modalBox{
+    .mid-banner-wrap img{
       width:100%;
-      height:100vh;
-      max-height:100vh;
-      border-radius:0;
+      height:280px;
+      object-fit:cover;
     }
-    .mhRight{ gap:6px; }
-    .miniBtn{ padding:9px 10px; }
-  }
-</style></div>
-<div class="fabWrap" data-ez="module-15vm2oz-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
-  <a class="fabBtn kakao" href="#" data-open-modal="kakaoModal" aria-label="카톡문의 열기">
-    <span class="ico">💬</span>
-    <span class="label">카톡문의 <small>바로 상담</small></span>
-  </a>
-  <a class="fabBtn visit" href="#" data-open-modal="visitModal" aria-label="방문예약 열기">
-    <span class="ico">📅</span>
-    <span class="label">방문예약 <small>시간 확정</small></span>
-  </a>
-</div>
-<div class="modalOverlay" id="kakaoModal" aria-hidden="true" data-ez="contents-1h4m19f-1">
-  <div class="modalBox" role="dialog" aria-modal="true" aria-label="카톡문의 모달">
-    <div class="modalHeader">
-      <div class="mhLeft">
-        <p class="modalTitle">카톡문의</p>
-        <p class="modalSub">상담 템플릿을 붙여넣고 바로 문의하세요.</p>
+
+    /* =========================
+      PRODUCT
+    ========================= */
+    .product-section{
+      background:rgba(255,255,255,.62);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+    .product-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:18px;
+      margin-top:18px;
+    }
+    .product-card{
+      background:#fff;
+      border-radius: var(--radius2);
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow: 0 10px 22px rgba(16,24,40,.06);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .product-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 16px 34px rgba(16,24,40,.10);
+    }
+    .product-image{
+      width:100%;
+      height:300px;
+      object-fit:contain;
+      padding:18px;
+      background: linear-gradient(180deg, #ffffff, #fafafa);
+    }
+    .product-info{
+      padding:18px 18px 20px;
+      text-align:left;
+    }
+    .product-title{
+      font-size:16px;
+      font-weight:900;
+      letter-spacing:-.02em;
+      margin-bottom:6px;
+    }
+    .product-sub{
+      color:var(--muted);
+      font-size:13px;
+      margin-bottom:12px;
+    }
+    .product-price{
+      color:var(--lgu-pink);
+      font-weight:900;
+      font-size:20px;
+      letter-spacing:-.02em;
+    }
+    .product-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* =========================
+      FOOTER
+    ========================= */
+    footer{
+      background:#0b1020;
+      color:rgba(255,255,255,.72);
+      padding:44px 0;
+      text-align:center;
+      font-size:13px;
+    }
+    footer p{margin:6px 0;}
+    footer .fine{opacity:.7}
+
+    /* =========================
+      FLOATING KAKAO (카톡 + 신청)
+    ========================= */
+    .floating{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      z-index:80;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .float-kakao{
+      width:58px;height:58px;
+      border-radius:18px;
+      display:flex;align-items:center;justify-content:center;
+      background: linear-gradient(135deg, var(--lgu-pink), var(--lgu-pink2));
+      color:#fff;
+      font-weight:900;
+      box-shadow: 0 16px 34px rgba(230,0,126,.25);
+      border:1px solid rgba(255,255,255,.25);
+    }
+    .float-apply{
+      padding:10px 12px;
+      border-radius:16px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow: var(--shadow2);
+      font-weight:900;
+      font-size:13px;
+      text-align:center;
+    }
+
+    /* =========================
+      TOAST (문구 복사 안내)
+    ========================= */
+    .toast{
+      position:fixed;
+      left:50%;
+      bottom:92px;
+      transform:translateX(-50%);
+      background:rgba(16,24,40,.92);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:14px;
+      font-size:14px;
+      z-index:9999;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .18s ease, transform .18s ease;
+      max-width:min(92vw, 560px);
+      text-align:center;
+      box-shadow: 0 18px 42px rgba(0,0,0,.22);
+    }
+    .toast.show{
+      opacity:1;
+      transform:translateX(-50%) translateY(-2px);
+    }
+
+    /* =========================
+      RESPONSIVE
+    ========================= */
+    @media (max-width: 980px){
+      nav{display:none;}
+      .hero-image-placeholder{height:480px;}
+      .feature-item, .feature-item:nth-child(even){
+        flex-direction:column;
+        text-align:center;
+        gap:18px;
+      }
+      .feature-image img{height:260px;}
+      .product-grid{grid-template-columns:1fr; gap:14px;}
+      .section{padding:60px 0;}
+      .top-promo .mini{display:none;}
+    }
+    @media (max-width: 520px){
+      header .container{height:62px;}
+      .btn{padding:12px 14px;}
+      .hero-image-placeholder{height:420px;}
+      .top-promo .container{padding:9px 14px;}
+      .container{padding:0 14px;}
+      .toast{bottom:86px;font-size:13px;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ✅ 카톡 링크 -->
+  <script>
+    const KAKAO_LINK = "https://pf.kakao.com/_sdYlu/chat";
+  </script>
+
+  <!-- ✅ 상단 띠배너 -->
+  <div class="top-promo">
+    <div class="container">
+      <div class="msg">ALGO 알고 쓰셔야합니다! 모르고 쓰면 안돼요! · 휴대폰/인터넷 특판전문</div>
+      <div class="mini">
+        <span class="pill">서울·수도권</span>
+        <span class="pill">365일 상담</span>
       </div>
-      <div class="mhRight">
-        <button class="miniBtn primary" type="button" data-fill-template>
-          ✍️ 상담 템플릿 자동 입력
-        </button>
-        <button class="miniBtn close" type="button" data-close-modal>닫기 ✕</button>
-      </div>
-    </div>
-    <div class="modalBody">
-      <iframe class="modalFrame" id="kakaoFrame" src loading="lazy"></iframe>
     </div>
   </div>
-</div>
-<div class="modalOverlay" id="visitModal" aria-hidden="true" data-ez="contents-0znrwv7-1">
-  <div class="modalBox" role="dialog" aria-modal="true" aria-label="방문예약 모달">
-    <div class="modalHeader">
-      <div class="mhLeft">
-        <p class="modalTitle">방문예약</p>
-        <p class="modalSub">원하시는 날짜/시간으로 예약을 진행해주세요.</p>
-      </div>
-      <div class="mhRight">
-        <button class="miniBtn primary" type="button" data-fill-template>
-          ✍️ 상담 템플릿 자동 입력
-        </button>
-        <button class="miniBtn close" type="button" data-close-modal>닫기 ✕</button>
+
+  <header>
+    <div class="container">
+      <a class="logo" href="#">
+        <span class="logo-badge" aria-hidden="true"></span>
+        <span>LG U+ 랜딩페이지 예시</span>
+      </a>
+
+      <nav>
+        <a href="#features">혜택</a>
+        <a href="#purchase">추천기기</a>
+        <a href="#footer">회사정보</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn ghost" href="#purchase">요금/혜택 보기</a>
+
+        <!-- ✅ 카톡 버튼(문구 복사) -->
+        <a class="btn primary jsKakao"
+           href="#"
+           target="_blank" rel="noopener"
+           data-kmsg="휴대폰/인터넷 결합 상담 원해요. (번이/기변 + 500M/1G/TV) 조건 안내 부탁드립니다.">
+          카톡 상담
+        </a>
       </div>
     </div>
-    <div class="modalBody">
-      <iframe class="modalFrame" id="visitFrame" src loading="lazy"></iframe>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-wrap">
+        <img
+          src="https://via.placeholder.com/1920x600/e6007e/ffffff?text=MAIN+HERO+BANNER+IMAGE+(1920x600)"
+          alt="메인 프로모션 배너"
+          class="hero-image-placeholder"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-text">
+          <div class="eyebrow">🔥 지금만 가능한 단독 혜택 · 온라인 특가</div>
+          <h1>지금까지 없던 압도적 혜택<br/>오직 여기서만!</h1>
+          <p>단독 특별 할인가로 최신 기기를 만나보세요. 상담은 빠르게, 안내는 정확하게.</p>
+
+          <div class="hero-actions">
+            <!-- ✅ 신청 버튼 -->
+            <a href="#purchase" class="btn primary">혜택받고 신청하기</a>
+
+            <!-- ✅ 카톡 버튼(문구 복사) -->
+            <a href="#"
+               class="btn jsKakao"
+               target="_blank" rel="noopener"
+               data-kmsg="프로모션 혜택 보고 왔어요. 원하는 모델/요금제 추천과 실구매가 상담 부탁드립니다.">
+              카톡으로 조건 받기
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="section-title">핵심 혜택만 뽑아서 안내</div>
+          <div class="section-desc">
+            복잡한 조건은 줄이고, 필요한 혜택만 깔끔하게. 온라인 전용 구성/제휴 혜택을 한 페이지에서 확인하세요.
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="https://via.placeholder.com/900x600/dddddd/333333?text=Feature+Image+01+(Lifestyle)" alt="특징 이미지 1">
+        </div>
+        <div class="feature-text">
+          <div class="feature-kicker">01 · 온라인 전용</div>
+          <h2>온라인 전용 다이렉트 요금제</h2>
+          <p>
+            약정 부담은 줄이고 데이터는 더 많이!<br/>
+            오직 온라인몰에서만 만날 수 있는 합리적인 선택으로 구성해드립니다.
+          </p>
+
+          <!-- ✅ 카톡 버튼(문구 복사) -->
+          <a href="#"
+             class="feature-link jsKakao"
+             target="_blank" rel="noopener"
+             data-kmsg="다이렉트 요금제 상담 원해요. 데이터/요금 추천과 결합 할인 여부 안내 부탁드립니다.">
+            카톡으로 자세히 문의 →
+          </a>
+        </div>
+      </div>
+
+      <div class="feature-item">
+        <div class="feature-image">
+          <img src="https://via.placeholder.com/900x600/dddddd/333333?text=Feature+Image+02+(Benefit)" alt="특징 이미지 2">
+        </div>
+        <div class="feature-text">
+          <div class="feature-kicker">02 · 매월 혜택</div>
+          <h2>매월 쏟아지는 제휴 혜택</h2>
+          <p>
+            구독 서비스부터 멤버십 할인까지,<br/>
+            일상 속에서 누리는 다양한 제휴 혜택을 경험하세요.
+          </p>
+
+          <!-- ✅ 카톡 버튼(문구 복사) -->
+          <a href="#"
+             class="feature-link jsKakao"
+             target="_blank" rel="noopener"
+             data-kmsg="제휴/멤버십 혜택 자세히 알고 싶어요. 가능한 혜택 구성 안내 부탁드립니다.">
+            카톡으로 자세히 문의 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID BANNER -->
+  <section class="mid-banner-section">
+    <div class="container">
+      <div class="mid-banner-wrap">
+        <img src="https://via.placeholder.com/1920x250/333333/ffffff?text=MID-SECTION+PROMOTION+BANNER" alt="중간 프로모션 배너">
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section class="section product-section" id="purchase">
+    <div class="product-grid">
+
+  <!-- ===== 기본 노출 6개 ===== -->
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Galaxy+S25" class="product-image">
+    <div class="product-info">
+      <div class="product-title">Galaxy S25</div>
+      <div class="product-sub">번이/기변 · 요금제 조건 상담</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 S25 상담 원해요. 번이/기변 조건 부탁드립니다.">카톡 상담</a>
+      </div>
     </div>
   </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=iPhone+17" class="product-image">
+    <div class="product-info">
+      <div class="product-title">iPhone 17</div>
+      <div class="product-sub">최신 모델 · 실구매가 상담</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="아이폰 17 상담 원해요. 번이/기변 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Galaxy+Fold+7" class="product-image">
+    <div class="product-info">
+      <div class="product-title">Galaxy Fold 7</div>
+      <div class="product-sub">프리미엄 폴더블 · 재고/색상 문의</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 폴드7 상담 원해요. 조건/재고/색상 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=iPhone+17+Pro" class="product-image">
+    <div class="product-info">
+      <div class="product-title">iPhone 17 Pro</div>
+      <div class="product-sub">프로 모델 · 고급 사양</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="아이폰 17 Pro 상담 원해요. 요금제/조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Galaxy+Z+Flip+7" class="product-image">
+    <div class="product-info">
+      <div class="product-title">Galaxy Z Flip 7</div>
+      <div class="product-sub">폴더블 · 휴대성 강조</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 Z 플립7 상담 원해요. 번이/기변 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Kids+Phone" class="product-image">
+    <div class="product-info">
+      <div class="product-title">무너 키즈폰</div>
+      <div class="product-sub">초등학생/자녀용 추천</div>
+      <div class="product-price">조건별 상이</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="무너 키즈폰 상담 원해요. 요금제/혜택 안내 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 더보기 영역 (숨김) ===== -->
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Galaxy+S25+FE" class="product-image">
+    <div class="product-info">
+      <div class="product-title">Galaxy S25 FE</div>
+      <div class="product-sub">가성비 모델</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 S25 FE 상담 원해요. 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=iPhone+15" class="product-image">
+    <div class="product-info">
+      <div class="product-title">iPhone 15</div>
+      <div class="product-sub">가격 안정화 모델</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="아이폰 15 상담 원해요. 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=iPhone+16" class="product-image">
+    <div class="product-info">
+      <div class="product-title">iPhone 16</div>
+      <div class="product-sub">신형 라인업</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="아이폰 16 상담 원해요. 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Galaxy+A17" class="product-image">
+    <div class="product-info">
+      <div class="product-title">Galaxy A17</div>
+      <div class="product-sub">실속형 · 부모님 추천</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 A17 상담 원해요. 조건 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=Mom+Phone" class="product-image">
+    <div class="product-info">
+      <div class="product-title">갤럭시 맘폰</div>
+      <div class="product-sub">부모님/효도폰</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="갤럭시 맘폰 상담 원해요. 요금제/혜택 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-more="1">
+    <img src="https://via.placeholder.com/560x560/ffffff/e6007e?text=USIM+Only" class="product-image">
+    <div class="product-info">
+      <div class="product-title">유심만 가입</div>
+      <div class="product-sub">기기 없이 요금제만</div>
+      <div class="product-actions">
+        <a class="btn primary jsKakao" href="#" data-kmsg="유심만 가입 상담 원해요. 요금제 추천 부탁드립니다.">카톡 상담</a>
+      </div>
+    </div>
+  </div>
+
 </div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-12z9lll-1"><script>
-  // ✅ 사용자가 준 링크 반영
-  const KAKAO_URL = "http://pf.kakao.com/_xmgiwn";        // 카톡문의
-  const VISIT_URL = "http://pf.kakao.com/_xmgiwn/chat";   // 방문예약(채팅)
 
-  // 템플릿(원하신 항목: 현재통신사/번이·기변/모델)
-  const CONSULT_TEMPLATE =
-`[상담요청 템플릿]
-1) 현재 통신사: (예: SK/KT/LG/알뜰)
-2) 진행 유형: (번호이동 / 기기변경)
-3) 원하는 모델/용량: (예: S25 울트라 256 / 아이폰17 PRO 256)
-4) 선호: (선약 / 공시 / 상관없음)
-5) 방문 가능 시간: (예: 오늘 6시 / 내일 오전)
-`;
+<!-- 더보기 버튼 -->
+<div style="margin-top:26px; text-align:center;">
+  <button class="btn" id="moreDevices" type="button">추천 디바이스 더보기</button>
+</div>
 
-  const map = {
-    kakaoModal: { modalId: "kakaoModal", frameId: "kakaoFrame", url: KAKAO_URL },
-    visitModal: { modalId: "visitModal", frameId: "visitFrame", url: VISIT_URL }
-  };
+</section>
 
-  function openModal(key){
-    const cfg = map[key];
-    if(!cfg) return;
+  <!-- Added toast container -->
+  <div id="kToast" class="toast"></div>
 
-    const modal = document.getElementById(cfg.modalId);
-    const frame = document.getElementById(cfg.frameId);
+  <script>
+    (function(){
+      // 1) 모든 jsKakao 링크에 카톡 링크 주입
+      document.querySelectorAll(".jsKakao").forEach(a => a.href = KAKAO_LINK);
 
-    // iframe 로드
-    frame.src = cfg.url;
+      // 2) 토스트
+      const toastEl = document.getElementById("kToast");
+      let toastTimer = null;
+      function toast(msg){
+        if(!toastEl) return;
+        toastEl.textContent = msg;
+        toastEl.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(()=> toastEl.classList.remove("show"), 1300);
+      }
 
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-  }
+      // 3) 클립보드 복사 (HTTPS 환경에서 가장 잘 됨)
+      async function copyText(text){
+        try{
+          if(navigator.clipboard && window.isSecureContext){
+            await navigator.clipboard.writeText(text);
+            return true;
+          }
+        }catch(e){}
+        // fallback
+        try{
+          const ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.left = "-9999px";
+          document.body.appendChild(ta);
+          ta.select();
+          const ok = document.execCommand("copy");
+          document.body.removeChild(ta);
+          return ok;
+        }catch(e){}
+        return false;
+      }
 
-  function closeModal(modal){
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
+      // 4) 카톡 버튼 클릭 시: 문구 복사 → 카톡 열기(기본 동작 유지)
+      document.addEventListener("click", async (e)=>{
+        const a = e.target.closest("a.jsKakao");
+        if(!a) return;
 
-    // 닫을 때 로딩 중지(선택)
-    const frame = modal.querySelector("iframe");
-    if(frame) frame.src = "";
-  }
+        const msg = a.getAttribute("data-kmsg");
+        if(!msg) return;
 
-  // 플로팅 버튼 클릭 → 모달 열기
-  document.querySelectorAll("[data-open-modal]").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal(btn.getAttribute("data-open-modal"));
-    });
-  });
+        // 링크 이동은 기본 동작으로 유지 (target="_blank")
+        // 여기서는 클립보드 복사만 시도
+        const ok = await copyText(msg);
+        if(ok) toast("상담 문구가 복사됐어요 🙂 카톡에 붙여넣기만 하시면 됩니다!");
+        else toast("복사가 어려우면 문구를 길게 눌러 복사해 주세요!");
+      });
+    })();
 
-  // 닫기 버튼
-  document.querySelectorAll("[data-close-modal]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modal = btn.closest(".modalOverlay");
-      if(modal) closeModal(modal);
-    });
-  });
+    // More Devices Functionality
+    (function(){
+      const btn = document.getElementById("moreDevices");
+      if(!btn) return;
 
-  // 오버레이 바깥 클릭 닫기
-  document.querySelectorAll(".modalOverlay").forEach(modal => {
-    modal.addEventListener("click", (e) => {
-      if(e.target === modal) closeModal(modal);
-    });
-  });
+      const moreCards = Array.from(document.querySelectorAll(".product-card[data-more='1']"));
+      moreCards.forEach(el => el.style.display = "none");
 
-  // ESC 닫기
-  window.addEventListener("keydown", (e) => {
-    if(e.key !== "Escape") return;
-    const opened = document.querySelector(".modalOverlay.show");
-    if(opened) closeModal(opened);
-  });
+      btn.addEventListener("click", ()=>{
+        const hidden = moreCards.filter(el => el.style.display === "none");
+        if(hidden.length){
+          hidden.forEach(el => el.style.display = "");
+          btn.textContent = "접기";
+        }else{
+          moreCards.forEach(el => el.style.display = "none");
+          btn.textContent = "추천 디바이스 더보기";
+          document.getElementById("purchase")?.scrollIntoView({behavior:"smooth"});
+        }
+      });
+    })();
+  </script>
 
-  // 템플릿 자동 입력: 클립보드에 복사 + 안내
-  async function copyTemplate(){
-    try{
-      await navigator.clipboard.writeText(CONSULT_TEMPLATE);
-      alert("상담 템플릿을 복사했어요!\n카톡/예약 화면 입력창에 붙여넣기 하시면 됩니다.");
-    }catch(err){
-      // fallback
-      const ta = document.createElement("textarea");
-      ta.value = CONSULT_TEMPLATE;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      alert("상담 템플릿을 복사했어요!\n카톡/예약 화면 입력창에 붙여넣기 하시면 됩니다.");
-    }
-  }
-
-  document.querySelectorAll("[data-fill-template]").forEach(btn => {
-    btn.addEventListener("click", copyTemplate);
-  });
-</script></div>
+</body>
+</html>
