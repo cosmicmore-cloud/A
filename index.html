@@ -1,1438 +1,821 @@
-<!--@layout(/layout/basic/layout.html)-->
-<!--@js(/layout/basic/js/main.js)-->
-<!--@css(/layout/basic/css/main.css)-->
-<!--@import(/smart-banner/shop1/smart-banner-admin-RES00008.html)-->
-<section class="section" data-ez-module="html/1" data-ez-name="CUSTOM HTML" data-ez-type="plain" data-ez="contents-05ml1x3-1">
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ALGO 휴대폰 시세표</title>
 
-<style>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1ylh2la-1"><meta charset="utf-8"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1bgf731-1"><meta name="viewport" content="width=device-width, initial-scale=1"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-11m46t6-1"><title>12/22 시세표 · 방문개통/번호이동/기변 · 인터넷 동반혜택</title></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-1ruq6ow-1"><meta name="description" content="2025.12.22 기준 휴대폰 시세표 및 부가서비스/유지조건/인터넷 동반혜택 안내 랜딩페이지"></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-172heda-1"><style>
+  <!-- Pretendard -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css">
+
+  <style>
     :root{
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --ink:#111827;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --accent:#2563eb;
-      --accent2:#ef4444;
-      --good:#10b981;
-      --warn:#f59e0b;
-      --bad:#ef4444;
-      /* Carrier Colors */
-      --sk-color: #E60012;
-      --kt-color: #00D1C6;
-      --lg-color: #E6007E;
+      /* ===== Part 1 Variables ===== */
+      --paper: #f6f1e9;
+      --bg: #e7e1d8;
+      --ink: #262626;
+      --muted: rgba(0,0,0,.55);
+      --line: rgba(0,0,0,.22);
+      --line2: rgba(0,0,0,.14);
+      --shadow: 0 18px 55px rgba(0,0,0,.15);
+      --radius: 18px;
 
-      --radius:16px;
-      --shadow: 0 10px 24px rgba(17,24,39,.08);
-      --shadow2: 0 4px 12px rgba(17,24,39,.08);
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --font: system-ui, -apple-system, Segoe UI, Roboto, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", Arial, sans-serif;
+      /* 통신사 컬러 (SK 레드 / KT 파랑 / LG 퍼플) */
+      --sk: #E11D48;
+      --kt: #2563EB;
+      --lg: #7C3AED;
+
+      --neg: #E11D48;
+      --pos: #111111;
+      --card: #ffffff;
+
+      /* ===== Part 2 Variables (Merged) ===== */
+      --main-bg:#eef5e6;
+      --header-bg:#9dc79d;
+      --table-header:#fffec4;
+
+      --sk-color:#E11D48;
+      --kt-color:#2563EB;
+      --lg-color:#7C3AED;
+
+      --sk-tint:rgba(225,29,72,.08);
+      --kt-tint:rgba(37,99,235,.07);
+      --lg-tint:rgba(124,58,237,.08);
+
+      --accent-red:#ff0000;
+      --border-color:#2f2f2f;
+
+      --chip-bg:#111827;
+      --chip-txt:#fff;
     }
-    *{box-sizing:border-box}
+
+    *{ box-sizing:border-box; }
     body{
-      margin:0; font-family:var(--font); color:var(--ink); background:linear-gradient(180deg,#eef2ff 0%, var(--bg) 32%, var(--bg) 100%);
-    }
-    a{color:inherit}
-    .wrap{max-width:1100px; margin:0 auto; padding:20px 16px 80px}
-    .topbar{
-      position:sticky; top:0; z-index:40;
-      background:rgba(246,247,251,.85); backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(229,231,235,.8);
-    }
-    .topbar .inner{max-width:1100px; margin:0 auto; padding:10px 16px; display:flex; gap:10px; align-items:center; justify-content:space-between}
-    .brand{display:flex; gap:10px; align-items:center}
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      background: radial-gradient(circle at 30% 30%, #93c5fd 0%, #2563eb 55%, #1d4ed8 100%);
-      box-shadow: var(--shadow2);
-    }
-    .brand h1{margin:0; font-size:15px; line-height:1.2}
-    .brand p{margin:2px 0 0; font-size:12px; color:var(--muted)}
-    .ctaRow{display:flex; gap:8px; align-items:center}
-    .btn{
-      appearance:none; border:1px solid var(--line); background:var(--card);
-      padding:10px 12px; border-radius:999px; font-weight:700; cursor:pointer;
-      box-shadow: 0 1px 0 rgba(17,24,39,.02);
-      display:inline-flex; gap:8px; align-items:center;
-      transition:.15s transform ease, .15s background ease, .15s border-color ease;
-      font-size:13px;
-      text-decoration:none;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{background:var(--accent); border-color:transparent; color:#fff}
-    .btn.danger{background:#111827; border-color:transparent; color:#fff}
-    .btn .dot{width:10px; height:10px; border-radius:50%; background:currentColor; opacity:.85}
-    .hero{
-      padding:18px 0 10px;
-      display:grid; grid-template-columns: 1.25fr .75fr; gap:14px;
-    }
-    .card{
-      background:var(--card); border:1px solid rgba(229,231,235,.9);
-      border-radius:var(--radius); box-shadow: var(--shadow);
-      padding:16px;
-    }
-    .hero h2{margin:0 0 6px; font-size:20px}
-    .hero .sub{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
-    .pillRow{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-    .pill{
-      padding:7px 10px; border-radius:999px; border:1px solid var(--line);
-      background:#f9fafb; font-size:12px; color:#374151;
-      display:inline-flex; gap:8px; align-items:center;
-    }
-    .pill.interactive{
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .pill.interactive:hover{ transform:translateY(-2px); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .pill b{font-family:var(--mono); font-size:12px}
-    .pill.red{border-color: rgba(239,68,68,.25); background: rgba(239,68,68,.06); color:#991b1b}
-    .pill.blue{border-color: rgba(37,99,235,.25); background: rgba(37,99,235,.06); color:#1e3a8a}
-    .pill.green{border-color: rgba(16,185,129,.25); background: rgba(16,185,129,.06); color:#065f46}
-    .quick{
-      display:flex; flex-direction:column; gap:10px;
-    }
-    .quick .mini{
-      padding:12px; border-radius:14px; border:1px solid var(--line);
-      background:linear-gradient(180deg,#ffffff 0%, #fafafa 100%);
-    }
-    .mini h3{margin:0 0 6px; font-size:13px}
-    .mini p{margin:0; font-size:12px; color:var(--muted); line-height:1.55}
-    .mini .badges{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
-    .badge{
-      font-size:11px; padding:5px 8px; border-radius:999px;
-      background:#f3f4f6; border:1px solid var(--line); color:#374151;
-    }
-    .tabs{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0 0}
-    .tab{
-      border:1px solid var(--line); background:#fff; color:#111827;
-      padding:9px 12px; border-radius:999px; cursor:pointer; font-weight:800; font-size:13px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      transition: all 0.2s ease;
-    }
-    .tab:hover{ transform: translateY(-1px); }
-    .tab[aria-selected="true"]{
-      background: var(--accent-bg, rgba(37,99,235,.09));
-      border-color: var(--accent-border, rgba(37,99,235,.25));
-      color: var(--accent) !important;
+      margin:0;
+      font-family: Pretendard, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 16px;
     }
 
-    /* Price Emphasis for Carrier Columns (Number Transfer) */
-    /* SK 번이 (col 2), KT 번이 (col 4), LG 번이 (col 6) */
-    /* Using nth-child to be safer with th siblings */
-    #prices tbody td:nth-child(2) { color: var(--sk-color) !important; font-weight: 900; }
-    #prices tbody td:nth-child(4) { color: var(--kt-color) !important; font-weight: 900; }
-    #prices tbody td:nth-child(6) { color: var(--lg-color) !important; font-weight: 900; }
-    .section{margin-top:14px}
-    .sectionHeader{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin:0 0 10px}
-    .sectionHeader h3{margin:0; font-size:16px}
-    .sectionHeader .hint{margin:0; color:var(--muted); font-size:12px}
+    .wrap{
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 1px solid rgba(0,0,0,.16);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+    }
+
+    /* ===== HERO (포스터 느낌) ===== */
+    .hero{
+      position: relative;
+      padding: 18px 16px 14px;
+      background:
+        radial-gradient(60% 60% at 50% 10%, rgba(255,140,80,.60), rgba(255,140,80,0) 60%),
+        linear-gradient(180deg, #2a2625 0%, #3b3430 45%, #4a3f39 100%);
+      color:#fff;
+      text-align:center;
+    }
+    .sun{
+      width: 54px; height:54px;
+      margin: 0 auto 6px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #ffe6d6, #ff7a4b 62%, #c44728 100%);
+      box-shadow: 0 12px 26px rgba(0,0,0,.35);
+      position: relative;
+    }
+    .birds{
+      position:absolute;
+      left: 50%;
+      top: 38px;
+      transform: translateX(-50%);
+      opacity:.9;
+    }
+    .hero-top{
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: .2px;
+      opacity:.95;
+      margin: 6px 0 10px;
+    }
+    .hero-divider{
+      display:flex;
+      height: 6px;
+      margin-top: 10px;
+    }
+    .hero-divider span{ flex:1; }
+    .hero-divider .r{ background: var(--sk); }
+    .hero-divider .g{ background:#22c55e; }
+    .hero-divider .b{ background: var(--kt); }
+
+    .auto-style1 {
+	  font-weight: 900;
+	  font-size: 18px;
+	  letter-spacing: .2px;
+	  opacity: .95;
+	  margin: 6px 0 10px;
+	  color: #fff; /* Changed to white for visibility on dark hero */
+    }
+
+    /* ===== TITLE ===== */
+    .titleBlock{
+      padding: 16px 16px 10px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,0) 40%),
+        var(--paper);
+      border-bottom: 1px solid var(--line2);
+    }
+    .tagline{
+      margin: 10px 0 0;
+      background: #c7ad7a;
+      color:#fff;
+      font-weight: 900;
+      text-align:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      letter-spacing: .1px;
+    }
+    .notes{
+      margin-top: 10px;
+      color: rgba(0,0,0,.65);
+      font-weight: 800;
+      font-size: 12.5px;
+      text-align:center;
+      line-height: 1.45;
+    }
+
+    /* ===== CONTENT STYLES (From Part 2) ===== */
+    .inner-container {
+      background: var(--main-bg);
+      /* Removing border/shadow as it's inside wrap now */
+    }
+
+    /* 상단 헤더 */
+    .brand-header{
+      background:#f0f0f0;
+      text-align:center;
+      padding:20px 0;
+      border-bottom:5px solid var(--header-bg);
+    }
+    .brand-title{
+      font-size:2.1rem;
+      font-weight:900;
+      margin:8px 0;
+      color:#222;
+      text-shadow:2px 2px 0 #fff;
+    }
+    .brand-sub{font-size:1.1rem;color:#555;margin-bottom:10px}
+
+    /* 규칙 박스 */
+    .rules-box{
+      background:#fff;
+      border:2px solid rgba(0,0,0,.85);
+      border-radius:10px;
+      width:90%;
+      margin:0 auto 20px;
+      padding:15px;
+      text-align:left;
+      box-shadow:0 6px 14px rgba(0,0,0,.06);
+    }
+    .rules-box h3{
+      text-align:center;
+      margin-top:0;
+      color:#111;
+      text-decoration:underline;
+    }
+    .rules-list div{
+      margin-bottom:8px;
+      font-size:.9rem;
+      font-weight:700;
+      color:#222;
+    }
+    .rules-list span{
+      display:inline-block;
+      padding:2px 8px;
+      border:1px solid rgba(0,0,0,.45);
+      border-radius:15px;
+      margin-right:5px;
+      background:#f3f4f6;
+    }
+
+    /* 공지 */
+    .notice-text{
+      padding:15px;
+      text-align:center;
+      font-size:.85rem;
+      font-weight:900;
+      color:var(--accent-red);
+      line-height:1.6;
+      background:#fff;
+      margin:10px;
+      border:2px dashed var(--accent-red);
+      box-shadow:0 6px 14px rgba(0,0,0,.06);
+    }
+
+    /* 날짜 헤더 */
+    .date-header{
+      background:var(--header-bg);
+      color:#111;
+      font-weight:900;
+      padding:10px;
+      text-align:center;
+      font-size:1.05rem;
+      border-top:2px solid rgba(0,0,0,.75);
+      border-bottom:2px solid rgba(0,0,0,.75);
+    }
+    .current-date{
+      display:inline-block;
+      background:#fff;
+      padding:2px 10px;
+      border-radius:6px;
+      margin-right:10px;
+      font-size:.9rem;
+      color:#0B57D0;
+      border:1px solid rgba(0,0,0,.15);
+    }
+
+    /* 테이블 공통 */
+    .section{
+      padding: 12px 14px 14px;
+      border-bottom: 1px solid var(--line2);
+      background: #fff; /* Ensure contrast */
+    }
     .tableWrap{
-      overflow:auto;
-      border:1px solid var(--line);
-      border-radius:14px;
+      width:100%;
+      overflow-x:auto;
+      border: 1px solid var(--line2);
+      border-radius: 14px;
+      background:#fff;
+      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:.8rem;
+      text-align:center;
       background:#fff;
     }
-    table{
-      border-collapse:separate; border-spacing:0;
-      width:100%;
-      min-width:860px;
-      font-size:13px;
+    th,td{
+      border:1px solid var(--border-color);
+      padding:6px 4px;
+      white-space:nowrap;
     }
     thead th{
-      position:sticky; top:0; z-index:2;
-      background:#f9fafb;
-      border-bottom:1px solid var(--line);
-      padding:12px 10px;
+      position:sticky;
+      top:0;
+      z-index:1;
+      background: #d1d1d1;
+    }
+
+    .seriesTitle{
       text-align:center;
-      white-space:nowrap;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: .4px;
+      padding: 10px 10px;
+      background: #f2ede5;
+      border-bottom: 1px solid rgba(0,0,0,.20);
     }
-    tbody td, tbody th{
-      border-bottom:1px solid var(--line);
-      padding:11px 10px;
-      text-align:center;
-      white-space:nowrap;
+
+    /* 통신사 컬럼 */
+    .col-sk, .sk{background:var(--sk-tint);color:var(--sk-color);font-weight:900}
+    .col-kt, .kt{background:var(--kt-tint);color:var(--kt-color);font-weight:900}
+    .col-lg, .lg{background:var(--lg-tint);color:var(--lg-color);font-weight:900}
+
+    .left{ text-align:left; padding-left:10px; font-weight:700; background: #f7f2eb; }
+    .pos{ color: #111; font-weight: 700; }
+    .neg{ color: var(--accent-red); font-weight: 900; }
+
+    /* 모바일 UI */
+    #mobileUI{ margin: 10px; }
+    .m-ui{ background:#fff; border:1px solid rgba(0,0,0,.12); border-radius:16px; overflow:hidden; box-shadow:0 14px 30px rgba(0,0,0,.10); }
+    .m-top{ padding:12px; background:#f8fafc; border-bottom:1px solid rgba(0,0,0,.08); }
+    .m-headline{ margin:0 0 8px; font-size:16px; font-weight:900; color:#111; }
+    .m-tabs{ display:flex; gap:8px; margin-bottom:10px; }
+    .m-tab{ flex:1; padding:10px; font-weight:900; border-radius:999px; border:1px solid rgba(0,0,0,.15); background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .m-tab.active{ color:#fff; border-color:transparent; }
+    .m-tab[data-carrier=SK].active{ background:var(--sk-color); }
+    .m-tab[data-carrier=KT].active{ background:var(--kt-color); }
+    .m-tab[data-carrier=LG].active{ background:var(--lg-color); }
+    .m-dot{ width:8px; height:8px; border-radius:50%; background:#ccc; }
+    .m-tab.active .m-dot{ background:#fff; }
+
+    .m-row{ display:flex; gap:8px; flex-wrap:wrap; }
+    .m-toggle{ display:flex; border:1px solid rgba(0,0,0,.14); border-radius:999px; overflow:hidden; background:#fff; }
+    .m-btn{ padding:10px 14px; font-weight:900; border:0; background:#fff; cursor:pointer; }
+    .m-btn.active{ background:#111; color:#fff; }
+    .m-select, .m-search{ flex:1; padding:10px 12px; border-radius:12px; border:1px solid rgba(0,0,0,.15); font-weight:900; font-family:inherit; }
+
+    .m-list{ padding:10px; display:flex; flex-direction:column; gap:10px; }
+    .m-card{ border:1px solid rgba(0,0,0,.14); border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 6px 14px rgba(0,0,0,.05); }
+    .m-card-head{ padding:10px 12px; font-weight:900; background:#f3f4f6; display:flex; justify-content:space-between; align-items:center; }
+    .m-card-body{ padding:12px; display:flex; justify-content:space-between; align-items:center; }
+    .m-value{ font-size:1.2rem; font-weight:900; }
+    .m-value.neg{ color: var(--accent-red); }
+    .m-badge{ font-size:11px; padding:3px 8px; border-radius:999px; font-weight:900; color:#fff; }
+    .m-badge.neg{ background: var(--accent-red); }
+    .m-badge.stock{ background: #b45309; }
+    .m-label{ font-size:0.9rem; color:#555; font-weight:700; }
+    .m-empty{ padding:20px; text-align:center; color:#777; font-weight:700; }
+
+    /* 유틸 */
+    .auto-style6 { font-size: large; color: #111011; text-shadow: 2px 2px 0px #fff; margin: 0; background-color: #E6E8EE; padding: 4px; font-weight:bold; }
+    .auto-style13{color:#1319DE}
+    .auto-style20 { color: #0000FF; }
+    .hintGreen{ color:#16a34a; font-weight: 900; text-align:center; padding: 8px 0 0; font-size: 12.5px; }
+    .miniLine{ border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); padding: 8px 10px; margin: 10px 0 0; font-weight: 900; color: rgba(0,0,0,.70); text-align:center; background: rgba(0,0,0,.02); }
+    .bigBanner{ padding: 18px 14px; text-align:center; font-weight: 900; background: #f2ede5; border: 1px solid var(--line2); border-radius: 14px; box-shadow: 0 12px 26px rgba(0,0,0,.08); line-height: 1.25; margin-top: 12px; }
+    .bigBanner .line1{ font-size: 24px; }
+    .bigBanner .line2{ font-size: 24px; }
+    .bigBanner .line3{ font-size: 28px; letter-spacing:.3px; }
+
+    @media (max-width: 768px){
+      /* 모바일에서는 기본 테이블 숨기고 모바일 UI만 사용 */
+      .posterOnly { display: none; }
     }
-    tbody tr:last-child td, tbody tr:last-child th{border-bottom:0}
-    tbody th{
-      text-align:left; font-weight:900;
-      background:#fcfcfd;
+    @media (min-width: 769px){
+      #mobileUI { display: none; }
     }
-    .kpi{
-      font-family:var(--mono);
-      font-weight:900;
-      letter-spacing:.2px;
-    }
-    .kpi.neg{color:var(--bad)}
-    .kpi.pos{color:#111827}
-    .kpi.zero{color:var(--muted)}
-    .na{
-      color:#9ca3af;
-      font-style:italic;
-      font-size:12px;
-    }
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-    details{
-      border:1px solid var(--line); border-radius:14px; background:#fff;
-      overflow:hidden;
-    }
-    summary{
-      cursor:pointer;
-      list-style:none;
-      padding:14px 14px;
-      font-weight:900;
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      background:linear-gradient(180deg,#fff 0%, #fafafa 100%);
-    }
-    summary::-webkit-details-marker{display:none}
-    .detailsBody{padding:0 14px 14px}
-    .detailsBody p{margin:10px 0 0; color:#374151; font-size:13px; line-height:1.6}
-    .detailsBody ul{margin:10px 0 0; padding-left:18px; color:#374151; font-size:13px; line-height:1.7}
-    .callout{
-      border-radius:14px;
-      background: rgba(245,158,11,.08);
-      border:1px solid rgba(245,158,11,.25);
-      padding:12px 12px;
-      color:#92400e;
-      font-size:13px;
-      line-height:1.6;
-    }
-    .callout strong{color:#78350f}
-    .foot{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.6;
-    }
-    .footerCta{
-      margin-top:14px;
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .copyBtn{border:1px dashed rgba(37,99,235,.35); background:rgba(37,99,235,.06); color:#1e3a8a}
-    .toast{
-      position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
-      background:#111827; color:#fff;
-      padding:10px 12px; border-radius:999px;
-      font-size:12px; opacity:0; pointer-events:none;
-      transition:.18s opacity ease, .18s transform ease;
-      box-shadow: var(--shadow2);
-      z-index:99;
-    }
-    .toast.show{opacity:1; transform:translateX(-50%) translateY(-6px)}
-    @media (max-width: 920px){
-      .hero{grid-template-columns: 1fr}
-      table{min-width:780px}
-      .grid2{grid-template-columns: 1fr}
-    }
-  </style></div>
-<div class="topbar" data-ez="module-1hx9b6h-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
-    <div class="inner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>12/22 시세표 · 방문개통/번호이동/기변</h1>
-          <p>가격표 + 부가서비스 + 유지조건 + 인터넷 동반혜택</p>
-        </div>
-      </div>
-      <div class="ctaRow">
-        <!-- ✅ 여기에 카톡/전화 링크를 교체하세요 -->
-        <a class="btn primary" href="http://pf.kakao.com/_bFhTM/chat" target="_blank" rel="noopener">
-          <span class="dot"></span> 카톡상담
-        </a>
-        <a class="btn danger" href="#policy">
-          <span class="dot"></span> 조건/주의
-        </a>
-      </div>
-    </div>
-  </div>
-<div class="wrap" data-ez="module-1om3949-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
     <!-- HERO -->
-    <div class="hero">
-      <div class="card">
-        <h2>오늘 조건 한눈에 보기</h2>
-        <p class="sub">
-          아래 표는 <b>숫자(단위: 만원)</b> 기준으로 정리되어 있으며, <b>블랙(공란)</b> 영역은 진행/재고/조건 상 <b>불가</b> 또는 <b>미오픈</b> 항목입니다.
-          <br>※ 표와 실제 진행 조건이 상이할 경우, <b>상담 확정 조건</b>이 우선입니다.
-        </p>
-
-        <div class="pillRow">
-          <span class="pill blue">기준일 <b>2025-12-23</b></span>
-          <span class="pill interactive" onclick="setTheme('sk')">SK <b>109</b>요금</span>
-          <span class="pill interactive" onclick="setTheme('kt')">KT <b>110</b>요금</span>
-          <span class="pill interactive" onclick="setTheme('lg')">LG <b>115</b>요금</span>
-          <span class="pill red">긴급스팟: 마감 예정 없음(변동)</span>
-          <span class="pill green">인터넷 동반 시 지원금 별도</span>
-        </div>
-
-        <div class="footerCta">
-          <button class="btn copyBtn" id="copyAll">전체 표 링크/요약 복사</button>
-          <a class="btn" href="#prices">시세표 보기</a>
-          <a class="btn" href="#internet">인터넷 동반혜택</a>
-          <a class="btn" href="#addons">부가서비스</a>
-        </div>
-
-        <p class="foot">
-          * “선약 진행 시 구매가에 공시 금액만큼 더해주시면 됩니다 ^^” (아이폰17 표 하단 문구 반영)
-        </p>
+    <header class="hero">
+      <div class="sun">
+        <svg class="birds" width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18 20c6-6 12-6 18 0" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <path d="M34 20c6-6 12-6 18 0" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <path d="M72 18c5-5 10-5 15 0" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+          <path d="M85 18c5-5 10-5 15 0" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+        </svg>
       </div>
-
-      <div class="quick">
-        <div class="mini">
-          <h3>📌 꼭 확인</h3>
-          <p>
-            유지기간 위반/미사용/비정상 판정 시 <b>출고가 재청구</b>가 발생할 수 있습니다.
-            방문 전 <b>신분증</b> 및 (미성년자) <b>서류</b>를 준비해주세요.
-          </p>
-          <div class="badges">
-            <span class="badge">유심기변/기변 제한</span>
-            <span class="badge">회선/요금제 유지</span>
-            <span class="badge">데이터/통화 기준</span>
-          </div>
-        </div>
-
-        <div class="mini">
-          <h3>⚡ 빠른 상담 체크리스트</h3>
-          <p>
-            ① 통신사(현재) ② 번호이동/기변 ③ 모델/용량 ④ 요금제 가능 여부 ⑤ 부가서비스 가능 여부
-          </p>
-          <div class="badges">
-            <span class="badge">현재 통신사</span>
-            <span class="badge">개통유형</span>
-            <span class="badge">원하는 모델</span>
-          </div>
-        </div>
+      <div class="auto-style1">2026, 새해 복 많이 받으세요</div>
+      <div class="hero-divider" aria-hidden="true">
+        <span class="r"></span><span class="g"></span><span class="b"></span>
       </div>
-    </div>
+    </header>
 
-    <!-- 탭 -->
-    <div class="tabs" role="tablist" aria-label="시세표 탭">
-      <button class="tab" role="tab" aria-selected="true" data-target="tab-prices">휴대폰 시세표</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-internet">인터넷 동반혜택</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-addons">부가서비스 안내</button>
-      <button class="tab" role="tab" aria-selected="false" data-target="tab-policy">긴급스팟/유지조건</button>
-    </div>
+    <div class="inner-container">
+        <!-- BRAND HEADER -->
+        <div class="brand-header">
+            <h1 class="brand-title">ALGO</h1>
+            <img src='https://gi.esmplus.com/awaterwave/ALGO/algo_off/logo/1.png' alt="Logo" style="max-width:200px;" />
 
-    <!-- ================== TAB: PRICES ================== -->
-    <div class="section card" id="prices" data-tab="tab-prices">
-      <div class="sectionHeader">
-        <h3>휴대폰 시세표 (단위: 만원)</h3>
-        <p class="hint">모바일에서는 좌우 스크롤로 확인</p>
-      </div>
+            <p class="brand-title" style="font-size:1.2rem;">
+            안녕하세요 휴대폰 성지 ALGO 입니다<br><br>
+            시세표외 부가/상조/워치 끼워팔기 X<br>
+            신분증 맡김 없습니다
+            </p>
 
-      <!-- 갤럭시 S25 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>갤럭시 S25</h3>
-          <p class="hint">SK(109) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>S25 256</th>
-                <td class="kpi pos">2</td><td class="kpi pos">7</td>
-                <td class="kpi neg">-11</td><td class="kpi neg">-21</td>
-                <td class="kpi neg">-22</td><td class="kpi neg">-4</td>
-              </tr>
-              <tr><th>S25+ 256</th>
-                <td class="kpi pos">21</td><td class="kpi pos">26</td>
-                <td class="kpi pos">8</td><td class="kpi pos">22</td>
-                <td class="kpi neg">-2</td><td class="kpi pos">15</td>
-              </tr>
-              <tr><th>S25 울트라 256</th>
-                <td class="kpi pos">56</td><td class="kpi pos">61</td>
-                <td class="kpi pos">45</td><td class="kpi pos">42</td>
-                <td class="kpi pos">32</td><td class="kpi pos">50</td>
-              </tr>
-              <tr><th>S25 엣지 256</th>
-                <td class="kpi pos">26</td><td class="kpi pos">26</td>
-                <td class="kpi pos">10</td><td class="kpi neg">-8</td>
-                <td class="kpi pos">1</td><td class="kpi pos">20</td>
-              </tr>
-              <tr><th>S25 엣지 512</th>
-                <td class="kpi pos">40</td><td class="kpi pos">40</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">16</td><td class="kpi pos">34</td>
-              </tr>
-              <tr><th>S25 FE 256</th>
-                <td class="kpi neg">-12</td><td class="kpi neg">-6</td>
-                <td class="kpi neg">-22</td><td class="kpi neg">-17</td>
-                <td class="kpi pos">4</td><td class="kpi pos">7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 아이폰 16 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>아이폰 16 (SK는 선약 표기)</h3>
-          <p class="hint">단위: 만원 · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금 · 선약)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>아이폰16 128</th>
-                <td class="kpi pos">55</td><td class="kpi pos">71</td>
-                <td class="kpi neg">-19</td><td class="kpi pos">13</td>
-                <td class="kpi neg">-22</td><td class="kpi pos">23</td>
-              </tr>
-              <tr><th>아이폰16 256</th>
-                <td class="kpi pos">71</td><td class="kpi pos">87</td>
-                <td class="kpi neg">-6</td><td class="kpi pos">27</td>
-                <td class="kpi neg">-5</td><td class="kpi pos">39</td>
-              </tr>
-              <tr><th>아이폰16 PRO 128</th>
-                <td class="kpi pos">85</td><td class="kpi pos">90</td>
-                <td class="kpi pos">15</td><td class="kpi pos">44</td>
-                <td class="kpi pos">9</td><td class="kpi pos">53</td>
-              </tr>
-              <tr><th>아이폰16 PRO 256</th>
-                <td class="kpi pos">103</td><td class="kpi pos">117</td>
-                <td class="kpi pos">30</td><td class="kpi pos">59</td>
-                <td class="kpi pos">24</td><td class="kpi pos">68</td>
-              </tr>
-              <tr><th>아이폰16 PRO 512</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">58</td><td class="kpi pos">87</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>아이폰16 PRO MAX 256</th>
-                <td class="kpi pos">120</td><td class="kpi pos">125</td>
-                <td class="kpi pos">48</td><td class="kpi pos">77</td>
-                <td class="kpi pos">44</td><td class="kpi pos">88</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 폴더블 6 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>폴더블 6</h3>
-          <p class="hint">단위: 만원 · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>플립6 256</th>
-                <td class="kpi pos">25</td><td class="kpi pos">56</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">34</td><td class="kpi pos">30</td>
-              </tr>
-              <tr><th>폴드6 256</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">50</td><td class="kpi pos">81</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 갤럭시 S24류 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>갤럭시 S24류</h3>
-          <p class="hint">S24 FE는 “KT 61K 요금제 기준” 표기</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>S24+ 256</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi neg">-36</td><td class="kpi neg">-2</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>S24 울트라 256</th>
-                <td class="kpi pos">9</td><td class="kpi pos">25</td>
-                <td class="kpi neg">-6</td><td class="kpi pos">27</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>S24 FE (KT 61K 요금제 기준)</th>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi neg">-18</td><td class="kpi pos">1</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 중/저가형 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>중·저가형 모델</h3>
-          <p class="hint">SK(선약 33) / KT(선약 61) / LG(공시 47)</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (선약 33요금)</th>
-                <th colspan="2">KT (선약 61요금)</th>
-                <th colspan="2">LG (공시 47요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>A17</th>
-                <td class="kpi neg">-13</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-9</td><td class="kpi neg">-6</td>
-              </tr>
-              <tr><th>A566 (퀀텀6) (39K)</th>
-                <td class="kpi pos">12</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M166 (와이드8)</th>
-                <td class="kpi zero">0</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A366 (A36) (SK 39K)</th>
-                <td class="kpi zero">0</td><td class="na">—</td>
-                <td class="kpi pos">8</td><td class="kpi pos">8</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M366 (점프4)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi pos">3</td><td class="kpi pos">3</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A166 (버디4)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-30</td><td class="kpi neg">-15</td>
-              </tr>
-              <tr><th>A165 (A16) (SK 33K · KT 37K)</th>
-                <td class="kpi neg">-14</td><td class="na">—</td>
-                <td class="kpi neg">-1</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 키즈폰 -->
-      <div class="section">
-        <div class="sectionHeader">
-          <h3>키즈폰</h3>
-          <p class="hint">SK(19 선약) / KT(27 선약) / LG(29 공시) · 신규/번이</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (19 선약)</th>
-                <th colspan="2">KT (27 선약)</th>
-                <th colspan="2">LG (29 공시)</th>
-              </tr>
-              <tr>
-                <th>신규</th><th>번이</th>
-                <th>신규</th><th>번이</th>
-                <th>신규</th><th>번이</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>A17 ZEM 포켓폰</th>
-                <td class="kpi neg">-13</td><td class="kpi pos">8</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M130 (사나모롤폰)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-14</td><td class="kpi neg">-6</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A17 폼폼푸린 키즈폰</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-5</td><td class="kpi zero">0</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>M150 (포켓몬에디션3)</th>
-                <td class="kpi neg">-17</td><td class="kpi neg">-5</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-              </tr>
-              <tr><th>A165 (무너에디션)</th>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="na">—</td><td class="na">—</td>
-                <td class="kpi neg">-24</td><td class="kpi pos">9</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="callout" style="margin-top:12px">
-        <strong>표 해석 팁</strong><br>
-        • 숫자는 만원 단위로 표기되어 있습니다. <br>
-        • “불가/미오픈”은 재고/정책/조건에 따라 진행이 어려운 영역입니다. (상담으로 최종 확인)
-      </div>
-    </div>
-
-    <!-- ================== TAB: INTERNET ================== -->
-    <div class="section card" id="internet" data-tab="tab-internet" style="display:none">
-      <div class="sectionHeader">
-        <h3>인터넷 동반혜택 (유선 상품 지원금 · 상품권 포함 · 최대기준)</h3>
-        <p class="hint">※ 휴대폰과 동시가입 시 인터넷/TV 지원금이며, 휴대폰 가격표는 별도</p>
-      </div>
-
-      <div class="tableWrap">
-        <table style="min-width:760px">
-          <thead>
-            <tr>
-              <th>통신사</th>
-              <th>결합 구성</th>
-              <th>유형</th>
-              <th>지원금(만원)</th>
-              <th>비고</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>SK</th>
-              <td>폰+500M+BTV ALL</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-              <td rowspan="6" style="text-align:left; color:var(--muted); font-size:12px; line-height:1.5">
-                재약정 문의 가능<br>
-                (상담 시 조건 확인)
-              </td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>폰+500M+BTV 스탠다드+</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>폰+500M+TV(에센스)</td>
-              <td>번호이동</td>
-              <td class="kpi pos">70</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>폰+500M+TV(베이직)</td>
-              <td>번호이동</td>
-              <td class="kpi pos">60</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰+500M+프리미엄환승구독</td>
-              <td>번호이동</td>
-              <td class="kpi pos">85</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰+500M+프리미엄 VOD</td>
-              <td>번호이동</td>
-              <td class="kpi pos">85</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="section" style="margin-top:16px">
-        <div class="sectionHeader">
-          <h3>아이폰 17 (단위: 만원)</h3>
-          <p class="hint">SK(109·선약) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금 · 선약)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>아이폰17 256</th>
-                <td class="kpi pos">73</td><td class="kpi pos">93</td>
-                <td class="kpi pos">9</td><td class="kpi pos">18</td>
-                <td class="kpi neg">-2</td><td class="kpi pos">23</td>
-              </tr>
-              <tr><th>아이폰17 512</th>
-                <td class="kpi pos">102</td><td class="kpi pos">122</td>
-                <td class="kpi pos">38</td><td class="kpi pos">46</td>
-                <td class="kpi pos">27</td><td class="kpi pos">52</td>
-              </tr>
-              <tr><th>아이폰 Air 256</th>
-                <td class="kpi pos">95</td><td class="kpi pos">102</td>
-                <td class="kpi pos">42</td><td class="kpi pos">49</td>
-                <td class="kpi pos">27</td><td class="kpi pos">52</td>
-              </tr>
-              <tr><th>아이폰 Air 512</th>
-                <td class="kpi pos">125</td><td class="kpi pos">132</td>
-                <td class="kpi pos">72</td><td class="kpi pos">79</td>
-                <td class="kpi pos">57</td><td class="kpi pos">82</td>
-              </tr>
-              <tr><th>아이폰17 PRO 256</th>
-                <td class="kpi pos">117</td><td class="kpi pos">123</td>
-                <td class="kpi pos">62</td><td class="kpi pos">69</td>
-                <td class="kpi pos">47</td><td class="kpi pos">72</td>
-              </tr>
-              <tr><th>아이폰17 PRO 512</th>
-                <td class="kpi pos">148</td><td class="kpi pos">154</td>
-                <td class="kpi pos">93</td><td class="kpi pos">100</td>
-                <td class="kpi pos">78</td><td class="kpi pos">103</td>
-              </tr>
-              <tr><th>아이폰17 PRO 1T</th>
-                <td class="kpi pos">178</td><td class="kpi pos">184</td>
-                <td class="kpi pos">123</td><td class="kpi pos">130</td>
-                <td class="kpi pos">108</td><td class="kpi pos">133</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 256</th>
-                <td class="kpi pos">137</td><td class="kpi pos">143</td>
-                <td class="kpi pos">107</td><td class="kpi pos">114</td>
-                <td class="kpi pos">101</td><td class="kpi pos">116</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 512</th>
-                <td class="kpi pos">168</td><td class="kpi pos">174</td>
-                <td class="kpi pos">138</td><td class="kpi pos">145</td>
-                <td class="kpi pos">132</td><td class="kpi pos">147</td>
-              </tr>
-              <tr><th>아이폰17 PRO MAX 1T</th>
-                <td class="kpi pos">198</td><td class="kpi pos">203</td>
-                <td class="kpi pos">167</td><td class="kpi pos">174</td>
-                <td class="kpi pos">162</td><td class="kpi pos">177</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="foot">
-          * 선약 진행 시 구매가에 공시 금액만큼 더해주시면 됩니다 ^^
-        </p>
-      </div>
-
-      <div class="section" style="margin-top:16px">
-        <div class="sectionHeader">
-          <h3>갤럭시 폴더블 7 (단위: 만원)</h3>
-          <p class="hint">SK(109) / KT(110) / LG(115) · 번이/기변</p>
-        </div>
-        <div class="tableWrap">
-          <table>
-            <thead>
-              <tr>
-                <th rowspan="2">모델</th>
-                <th colspan="2">SK (109요금)</th>
-                <th colspan="2">KT (110요금)</th>
-                <th colspan="2">LG (115요금)</th>
-              </tr>
-              <tr>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-                <th>번이</th><th>기변</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><th>플립7 256</th>
-                <td class="kpi pos">20</td><td class="kpi pos">28</td>
-                <td class="kpi pos">12</td><td class="kpi neg">-1</td>
-                <td class="kpi zero">0</td><td class="kpi neg">-8</td>
-              </tr>
-              <tr><th>플립7 512</th>
-                <td class="kpi pos">35</td><td class="kpi pos">40</td>
-                <td class="kpi pos">27</td><td class="kpi pos">14</td>
-                <td class="kpi pos">15</td><td class="kpi pos">7</td>
-              </tr>
-              <tr><th>플립7 FE (KT 90K 요금제)</th>
-                <td class="kpi pos">48</td><td class="kpi pos">55</td>
-                <td class="kpi pos">57</td><td class="kpi pos">63</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-              </tr>
-              <tr><th>폴드7 256</th>
-                <td class="kpi pos">112</td><td class="kpi pos">103</td>
-                <td class="kpi pos">111</td><td class="kpi pos">98</td>
-                <td class="kpi pos">98</td><td class="kpi pos">90</td>
-              </tr>
-              <tr><th>폴드7 512</th>
-                <td class="kpi pos">128</td><td class="kpi pos">128</td>
-                <td class="na" colspan="2">불가/미오픈</td>
-                <td class="kpi pos">123</td><td class="kpi pos">161</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-
-    <!-- ================== TAB: ADDONS ================== -->
-    <div class="section card" id="addons" data-tab="tab-addons" style="display:none">
-      <div class="sectionHeader">
-        <h3>부가서비스 안내</h3>
-        <p class="hint">표는 “각 통신사 별 부가서비스 리스트업”이며 실제 가입 항목은 유형별 상이</p>
-      </div>
-
-      <div class="callout">
-        상담 시 반드시 문의 바랍니다. <strong>표 내 리스트 외 부가서비스 가입은 없습니다.</strong>
-      </div>
-
-      <div class="tableWrap" style="margin-top:12px">
-        <table style="min-width:980px">
-          <thead>
-            <tr>
-              <th>통신사</th>
-              <th>부가서비스 항목 (기종 별 상이·최대항목)</th>
-              <th>인증</th>
-              <th>월요금</th>
-              <th>유지기간</th>
-              <th>부가 미가입 시 시세표 추가금</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>SK</th>
-              <td>우주패스</td>
-              <td>O</td>
-              <td>13,900원 or 무료</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>마이스마트콜 3</td>
-              <td>X</td>
-              <td>3,500원</td>
-              <td>M+1 (당월+1개월)</td>
-              <td>+2 추가</td>
-            </tr>
-            <tr>
-              <th>SK</th>
-              <td>보험(파손)</td>
-              <td>X</td>
-              <td>5,300 ~ 8,300</td>
-              <td>M+2 (당월+2개월)</td>
-              <td>+2 추가</td>
-            </tr>
-
-            <tr>
-              <th>KT</th>
-              <td>필수팩 L or M</td>
-              <td>X</td>
-              <td>6,900 ~ 9,900</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+7 추가</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>365 폰케어 보험(파손~고급)</td>
-              <td>X</td>
-              <td>5,900 ~ 14,000</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+2 추가</td>
-            </tr>
-            <tr>
-              <th>KT</th>
-              <td>OTT구독+스타벅스</td>
-              <td>X</td>
-              <td>13,900원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-
-            <tr>
-              <th>LG</th>
-              <td>유플레이 프리미엄</td>
-              <td>X</td>
-              <td>15,400원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+7 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>모두의할인팩</td>
-              <td>X</td>
-              <td>11,000원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+3 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>V컬러링 음악감상 플러스</td>
-              <td>X</td>
-              <td>8,800원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+6 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>듀얼번호</td>
-              <td>X</td>
-              <td>3,300원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+1 추가</td>
-            </tr>
-            <tr>
-              <th>LG</th>
-              <td>폰 교체패스 150~300</td>
-              <td>X</td>
-              <td>9,990원 ~ 15,990원</td>
-              <td>M+3 (당월+3개월)</td>
-              <td>+6 추가</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <p class="foot">
-        * 실제 가입되는 부가서비스는 표 내에서 유형/모델별로 상이합니다. 상담 시 확정 안내드립니다.
-      </p>
-    </div>
-
-    <!-- ================== TAB: POLICY ================== -->
-    <div class="section card" id="policy" data-tab="tab-policy" style="display:none">
-      <div class="sectionHeader">
-        <h3>긴급스팟 · 퀀텀 스팟 정책 세부 (퀀텀6 방문개통 · 신도림점)</h3>
-        <p class="hint">마감 예정 없음(변동 가능) · 실사용 목적 필수</p>
-      </div>
-
-      <div class="grid2">
-        <details open>
-          <summary>
-            1) 개통 기본 조건
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li><b>실제 사용이 아닌 경우 불가</b></li>
-              <li><b>번호이동</b>: 타통신사 → SKT</li>
-              <li>기존통신사 <b>3개월 미만</b> 중립 불가</li>
-              <li>전월 기준 <b>SKT 해지 이력</b> 존재 시 개통 불가</li>
-              <li>약정: 선택약정 <b>12개월</b> 또는 <b>24개월</b></li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            2) 부가서비스 / 추가지원금 / 사은품
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>부가서비스(당월 유지): 우주패스(올영/스벅), 마이스마트콜3, T올케어플러스</li>
-              <li>부가 미가입 시: 항목당 +2만원, 총 추가금 5만원</li>
-              <li>추가지원금: 추지 설정 20만 설정 시 -7 / 미설정 -2</li>
-              <li>꽃배달: 익월 말일 ~ 익익월 초 순차 배달</li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            3) 요금제/유지기간 (위반 시 출고가 재청구)
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>가능 요금제: 베이직플러스59 / 청년59 이상 / 키즈 젬플랜퍼펙트36</li>
-              <li>요금제 유지기간: <b>M+3개월(총 4개월)</b></li>
-              <li>추가지원 설정 시: <b>183일 이후</b> 42,000원 이상으로 변경 가능</li>
-              <li>회선 유지기간: <b>M+5개월</b></li>
-              <li><b>요금제/유지기간 위반 시 출고가격 단말기 재청구</b></li>
-            </ul>
-          </div>
-        </details>
-
-        <details>
-          <summary>
-            4) 금지사항 / 사용량 기준 / 청구 조건
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <div class="callout">
-              <strong>하루라도 위반 시</strong> 출고가+@ 청구될 수 있습니다.
+            <div style="margin: 20px 0;">
+                <p class="auto-style6">인천 부평점</p>
+                <p class="auto-style6">안산 초지점</p>
+                <p class="auto-style6">경기시흥(정왕)점</p>
+                <p class="auto-style6">시흥 대야점</p>
+                <p class="auto-style6">구로 온라인점</p>
+                <p class="auto-style6">구로 신도림점</p>
+                <p class="auto-style6">동작구 보라매점</p>
             </div>
-            <ul>
-              <li>유지기간 내: 유심기변/기변/번호이동/해지/일시정지 불가</li>
-              <li>유심 탈착 후 기기판매, 깡, 보이스피싱, 스팸문자 등 사회통념상 위반 행위 금지</li>
-              <li>M+5개월 내 사용량 기준:
-                <ul>
-                  <li>데이터: 매월 500MB 이상</li>
-                  <li>통화: 매월 30분 + 100콜 이상</li>
-                </ul>
-              </li>
-              <li>기준 미충족/미사용/비정상 판정 시: <b>출고가 618,200원 + 배상금@</b> 청구 가능</li>
-              <li>M+5개월 이후 번호이동 가능</li>
-            </ul>
-          </div>
-        </details>
-      </div>
 
-      <div class="section" style="margin-top:12px">
-        <details>
-          <summary>
-            5) 방문 준비물
-            <span style="color:var(--muted); font-weight:800; font-size:12px">열기/닫기</span>
-          </summary>
-          <div class="detailsBody">
-            <ul>
-              <li>방문 시: <b>신분증 지참</b></li>
-              <li>미성년자: 가족관계증명서, 법정대리인 신분증, 기본증명서 지참</li>
-            </ul>
-          </div>
-        </details>
-      </div>
+            <div class="rules-box">
+                <h3>"현금 완납으로 진행됩니다."</h3>
+                <div class="rules-list">
+                    <div><span>친절한 성지</span> 사장님이 직접 상담! 재방문 100%</div>
+                    <div><span>정직한 시세</span> 제휴카드 X 기기반납 X</div>
+                    <div><span>솔직한 성지</span> 후기 작성시 사은품 증정</div>
+                </div>
+            </div>
+        </div>
 
-      <p class="foot">
-        * 본 페이지는 “가격표 + 조건”을 보기 쉽게 재정리한 것이며, 최종 진행 조건은 상담 확정 기준으로 안내됩니다.
-      </p>
-    </div>
+        <div class="notice-text">
+            <span class="auto-style20">♥ 인터넷 동시 가입 시, 제휴카드/반납조건 절대 아님! ♥<br>
+            ♥ 시세표 그대로!! 추가금 없습니다. ♥<br><br>
+            ♥ 신분증 필수 + 개통 2시간 소요 ♥<br>
+            ♥ 재고문의 필수 ♥
+            </span>
+            <br><span class="auto-style13">현재 개통량 폭주로 일부재고는 예약 진행됩니다.</span>
+        </div>
 
-    <div class="card" style="margin-top:14px">
-      <div class="sectionHeader">
-        <h3>바로 상담하기</h3>
-        <p class="hint">아래 버튼 링크만 교체하면 끝</p>
-      </div>
-      <div class="footerCta">
-        <!-- ✅ 교체: 카카오 채널 / 오픈채팅 / 전화 -->
-        <a class="btn primary" href="http://pf.kakao.com/_bFhTM/chat" target="_blank" rel="noopener"><span class="dot"></span> 카톡상담</a>
-        <a class="btn" href="tel:0507-1489-8211"><span class="dot"></span> 전화하기</a>
-        <a class="btn" href="#prices"><span class="dot"></span> 시세표로</a>
-      </div>
-      <p class="foot">
-        상담 문의 시 아래 정보를 함께 보내주시면 빠릅니다: <br>
-        ① 현재통신사 ② 번호이동/기변 ③ 모델/용량 ④ 선약/공시 선호 ⑤ 부가서비스 가능 여부
-      </p>
-    </div>
-  </div>
-<div class="toast" id="toast" data-ez="contents-15hlnjh-1">복사 완료!</div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-0t06wev-1"><script>
-    // 탭 전환
-    const tabs = Array.from(document.querySelectorAll('.tab'));
-    const panels = Array.from(document.querySelectorAll('[data-tab]'));
+        <div class="date-header">
+            <span class="current-date">2026년 1월 11일</span>
+            휴대폰성지 ALGO 서울경기/부평/대야/시화/안산
+        </div>
 
-    function activate(targetId){
-      tabs.forEach(t => {
-        const on = t.dataset.target === targetId;
-        t.setAttribute('aria-selected', on ? 'true' : 'false');
-      });
-      panels.forEach(p => {
-        p.style.display = (p.dataset.tab === targetId) ? '' : 'none';
-      });
-      // 스크롤 위치 보정(상단바 높이만큼)
-      const topbar = document.querySelector('.topbar');
-      const y = window.scrollY;
-      window.scrollTo({ top: y - (topbar?.offsetHeight || 0), behavior:'instant' });
+        <!-- ✅ 모바일 UI 마운트 포인트 -->
+        <div id="mobileUI"></div>
+
+        <!-- =======================
+             포스터형(PC/태블릿)
+             ======================= -->
+        <div class="posterOnly">
+            <!-- iPhone 17 -->
+            <section class="section">
+                <div class="tableWrap">
+                <div class="seriesTitle">Apple iPhone17 Series</div>
+                <table class="price-table" data-series="Apple iPhone17 Series">
+                    <thead>
+                    <tr>
+                        <th style="width:240px"></th>
+                        <th colspan="2" class="sk">SK</th>
+                        <th colspan="2" class="kt">KT</th>
+                        <th colspan="2" class="lg">LGU+</th>
+                    </tr>
+                    <tr>
+                        <th class="left">모델</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="left">아이폰17 256G</td>
+                        <td class="pos">6</td><td class="pos">47</td>
+                        <td class="neg">-6</td><td class="pos">11</td>
+                        <td class="neg">-36</td><td class="pos">34</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 512G</td>
+                        <td class="pos">36</td><td class="pos">77</td>
+                        <td class="pos">24</td><td class="pos">41</td>
+                        <td class="neg">-6</td><td class="pos">64</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 에어 256G</td>
+                        <td class="pos">32</td><td class="pos">77</td>
+                        <td class="pos">24</td><td class="pos">29</td>
+                        <td class="pos">21</td><td class="pos">64</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 에어 512G</td>
+                        <td class="pos">61</td><td class="pos">106</td>
+                        <td class="pos">53</td><td class="pos">58</td>
+                        <td class="pos">50</td><td class="pos">93</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 PRO 256G</td>
+                        <td class="pos">51</td><td class="pos">96</td>
+                        <td class="pos">43</td><td class="pos">60</td>
+                        <td class="pos">13</td><td class="pos">83</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 PRO 512G</td>
+                        <td class="pos">82</td><td class="pos">127</td>
+                        <td class="pos">74</td><td class="pos">91</td>
+                        <td class="pos">44</td><td class="pos">114</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 PRO MAX 256G</td>
+                        <td class="pos">98</td><td class="pos">138</td>
+                        <td class="pos">98</td><td class="pos">115</td>
+                        <td class="pos">68</td><td class="pos">128</td>
+                    </tr>
+                    <tr>
+                        <td class="left">아이폰17 PRO MAX 512G</td>
+                        <td class="pos">129</td><td class="pos">169</td>
+                        <td class="pos">129</td><td class="pos">146</td>
+                        <td class="pos">99</td><td class="pos">159</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+            <!-- S25 -->
+            <section class="section">
+                <div class="tableWrap">
+                <div class="seriesTitle">SAMSUNG S25 Series</div>
+                <table class="price-table" data-series="SAMSUNG S25 Series">
+                    <thead>
+                    <tr>
+                        <th style="width:240px"></th>
+                        <th colspan="2" class="sk">SK</th>
+                        <th colspan="2" class="kt">KT</th>
+                        <th colspan="2" class="lg">LGU+</th>
+                    </tr>
+                    <tr>
+                        <th class="left">모델</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="left">갤럭시 S25 256G</td>
+                        <td class="neg">-39</td><td class="pos">11</td>
+                        <td class="neg">-15</td><td class="neg">-3</td>
+                        <td class="neg">-50</td><td class="pos">8</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 S25+ 256G</td>
+                        <td class="neg">-19</td><td class="pos">31</td>
+                        <td class="pos">25</td><td class="pos">25</td>
+                        <td class="neg">-27</td><td class="pos">32</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 S25 EdGE</td>
+                        <td class="neg">-14</td><td class="pos">31</td>
+                        <td class="pos">0</td><td class="pos">4</td>
+                        <td class="neg">-25</td><td class="pos">33</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 S25 울트라 256G</td>
+                        <td class="pos">16</td><td class="pos">66</td>
+                        <td class="pos">40</td><td class="pos">56</td>
+                        <td class="pos">8</td><td class="pos">67</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 S25 FE</td>
+                        <td class="neg">-59</td><td class="neg">-9</td>
+                        <td class="neg">-45</td><td class="neg">-25</td>
+                        <td class="neg">-35</td><td class="pos">0</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="hintGreen">* 갤럭시류 256G 즉시 개통, 512G 재고 없음</div>
+            </section>
+
+            <!-- 폴더블 7 -->
+            <section class="section">
+                <div class="tableWrap">
+                <div class="seriesTitle">SAMSUNG 폴더블 7 Series</div>
+                <table class="price-table" data-series="SAMSUNG 폴더블 7 Series">
+                    <thead>
+                    <tr>
+                        <th style="width:240px"></th>
+                        <th colspan="2" class="sk">SK</th>
+                        <th colspan="2" class="kt">KT</th>
+                        <th colspan="2" class="lg">LGU+</th>
+                    </tr>
+                    <tr>
+                        <th class="left">모델</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                        <th>이동</th><th>기변</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="left">갤럭시 플립 7 256G</td>
+                        <td class="neg">-16</td><td class="pos">34</td>
+                        <td class="pos">14</td><td class="pos">24</td>
+                        <td class="neg">-24</td><td class="pos">11</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 폴드 7 256G</td>
+                        <td class="pos">84</td><td class="pos">121</td>
+                        <td class="pos">93</td><td class="pos">108</td>
+                        <td class="pos">71</td><td class="pos">110</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+             <!-- 워치 동시판매 -->
+            <section class="section">
+                <div class="tableWrap">
+                <div class="seriesTitle">휴대폰 + 워치 동시 판매 기준</div>
+                <table class="price-table" data-series="휴대폰 + 워치 동시 판매 기준">
+                    <thead>
+                    <tr>
+                        <th class="left" style="width:240px">모델</th>
+                        <th>SK 이동</th><th>SK 기변</th>
+                        <th>KT 이동</th><th>KT 기변</th>
+                        <th>LGU+ 이동</th><th>LGU+ 기변</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="left">갤럭시 워치 8 40MM</td>
+                        <td class="pos">25</td><td class="pos">25</td>
+                        <td class="pos">5</td><td class="pos">5</td>
+                        <td class="pos">0</td><td class="pos">0</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 워치 8 44MM</td>
+                        <td class="pos">29</td><td class="pos">29</td>
+                        <td class="pos">12</td><td class="pos">12</td>
+                        <td class="pos">8</td><td class="pos">8</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 워치 8 CLASSIC</td>
+                        <td class="pos">30</td><td class="pos">30</td>
+                        <td class="pos">20</td><td class="pos">20</td>
+                        <td class="pos">14</td><td class="pos">14</td>
+                    </tr>
+                    <tr>
+                        <td class="left">갤럭시 워치 ULTRA</td>
+                        <td class="pos">55</td><td class="pos">55</td>
+                        <td class="pos">35</td><td class="pos">35</td>
+                        <td class="pos">19</td><td class="pos">19</td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="miniLine">SK 89 요금제 / KT 100 요금제 / LG 95 워치 요금무로</div>
+
+                <div class="bigBanner">
+                    <div class="line1">인터넷+TV+휴대폰</div>
+                    <div class="line2">최대 100만 지원!!</div>
+                    <div class="line3">SK 80&nbsp;&nbsp;KT 80&nbsp;&nbsp;LG 100</div>
+                </div>
+            </section>
+        </div><!-- /posterOnly -->
+
+    </div><!-- /inner-container -->
+  </div><!-- /wrap -->
+
+  <script>
+  (function(){
+    function isMobile(){ return window.matchMedia && window.matchMedia("(max-width: 768px)").matches; }
+
+    function textClean(t){ return (t||"").replace(/\s+/g," ").trim(); }
+
+    function escapeHtml(str){
+      return String(str||"")
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
     }
-    tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.target)));
 
-    // 전체 요약 복사
-    function toast(msg){
-      const el = document.getElementById('toast');
-      el.textContent = msg;
-      el.classList.add('show');
-      setTimeout(() => el.classList.remove('show'), 1300);
+    function detectBadges(valueText){
+      var t = valueText || "";
+      var stock = /재고부족|예약대기|예약|대기/.test(t);
+      var neg = (t.indexOf("-") !== -1 && t !== "-" && t !== "—");
+      return { stock: stock, neg: neg };
     }
 
-    document.getElementById('copyAll')?.addEventListener('click', async () => {
-      const url = location.href.split('#')[0];
-      const text =
-`[12/22 시세표 랜딩]
-- 페이지: ${url}
-- 섹션: 휴대폰 시세표 / 인터넷 동반혜택 / 부가서비스 / 긴급스팟 유지조건
-- 문의 시: 현재통신사, 번이/기변, 모델/용량, 선약/공시, 부가서비스 가능 여부를 함께 전달해주세요.`;
-      try{
-        await navigator.clipboard.writeText(text);
-        toast('요약 복사 완료!');
-      }catch(e){
-        // fallback
-        const ta = document.createElement('textarea');
-        ta.value = text;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        toast('요약 복사 완료!');
+    function parsePriceTables(){
+      var tables = Array.from(document.querySelectorAll("table.price-table"));
+      var result = [];
+
+      tables.forEach(function(table){
+        var series = table.getAttribute("data-series") || "시세표";
+
+        // 헤더(마지막 헤더줄) 추출
+        var thead = table.querySelector("thead");
+        if (!thead) return;
+
+        var headerRows = Array.from(thead.querySelectorAll("tr"));
+        if (headerRows.length < 2) return;
+
+        // 기본 매핑: [0]=모델, [1]=SK이동, [2]=SK기변, [3]=KT이동, [4]=KT기변, [5]=LG이동, [6]=LG기변
+        var COL = { model:0, SK:{MNP:1,CHG:2}, KT:{MNP:3,CHG:4}, LG:{MNP:5,CHG:6} };
+
+        var items = [];
+        Array.from(table.querySelectorAll("tbody tr")).forEach(function(tr){
+          var tds = Array.from(tr.querySelectorAll("td"));
+          if (tds.length < 7) return;
+
+          var model = textClean(tds[COL.model].textContent);
+          if (!model) return;
+
+          items.push({
+            model: model,
+            series: series,
+            SK: { MNP: textClean(tds[COL.SK.MNP].textContent), CHG: textClean(tds[COL.SK.CHG].textContent) },
+            KT: { MNP: textClean(tds[COL.KT.MNP].textContent), CHG: textClean(tds[COL.KT.CHG].textContent) },
+            LG: { MNP: textClean(tds[COL.LG.MNP].textContent), CHG: textClean(tds[COL.LG.CHG].textContent) }
+          });
+        });
+
+        if (items.length){
+          result.push({ series: series, items: items });
+        }
+      });
+
+      return result;
+    }
+
+    function buildMobileUI(){
+      var mount = document.getElementById("mobileUI");
+      if (!mount) return;
+
+      var sections = parsePriceTables();
+      if (!sections.length){
+        if(isMobile()) mount.innerHTML = '<div class="m-ui"><div class="m-empty">데이터 로딩 실패</div></div>';
+        return;
       }
-    });
 
-    // Theme Switcher
-    function setTheme(carrier) {
-      const root = document.documentElement;
-      const theme = {
-        sk: { color: '#E60012', bg: 'rgba(230, 0, 18, 0.15)', border: 'rgba(230, 0, 18, 0.3)' },
-        kt: { color: '#00D1C6', bg: 'rgba(0, 209, 198, 0.15)', border: 'rgba(0, 209, 198, 0.3)' },
-        lg: { color: '#E6007E', bg: 'rgba(230, 0, 126, 0.15)', border: 'rgba(230, 0, 126, 0.3)' }
+      var seriesList = sections.map(function(s){ return s.series; });
+
+      var state = {
+        carrier: "SK",
+        type: "MNP",
+        series: seriesList[0],
+        q: ""
       };
 
-      const t = theme[carrier];
-      if (t) {
-        root.style.setProperty('--accent', t.color);
-        root.style.setProperty('--accent-bg', t.bg);
-        root.style.setProperty('--accent-border', t.border);
+      function render(){
+        var sec = sections.find(function(s){ return s.series === state.series; }) || sections[0];
+        var list = sec.items || [];
 
-        // Also update the static CSS variables for table coloring if we want them to follow theme?
-        // No, the requirement is "Price emphasis: Num Transfer price with carrier color".
-        // This implies SK is always Red, KT always Mint in the table.
-        // So we don't change --sk-color etc.
+        var filtered = list.filter(function(it){
+          if (!state.q) return true;
+          return it.model.toLowerCase().indexOf(state.q.toLowerCase()) !== -1;
+        });
 
-        toast(carrier.toUpperCase() + ' 테마 적용 완료');
+        var html = '';
+        html += '<div class="m-ui">';
+        html += '  <div class="m-top">';
+        html += '    <p class="m-headline">ALGO 모바일 시세표</p>';
+
+        html += '    <div class="m-tabs">';
+        html += '      <button class="m-tab '+(state.carrier==="SK"?"active":"")+'" data-carrier="SK" type="button"><span class="m-dot"></span>SK</button>';
+        html += '      <button class="m-tab '+(state.carrier==="KT"?"active":"")+'" data-carrier="KT" type="button"><span class="m-dot"></span>KT</button>';
+        html += '      <button class="m-tab '+(state.carrier==="LG"?"active":"")+'" data-carrier="LG" type="button"><span class="m-dot"></span>LGU+</button>';
+        html += '    </div>';
+
+        html += '    <div class="m-row">';
+        html += '      <div class="m-toggle">';
+        html += '        <button class="m-btn '+(state.type==="MNP"?"active":"")+'" data-type="MNP" type="button">이동</button>';
+        html += '        <button class="m-btn '+(state.type==="CHG"?"active":"")+'" data-type="CHG" type="button">기변</button>';
+        html += '      </div>';
+
+        html += '      <select class="m-select" id="mSeries">';
+        seriesList.forEach(function(name){
+          html += '<option value="'+escapeHtml(name)+'" '+(name===state.series?'selected':'')+'>'+escapeHtml(name)+'</option>';
+        });
+        html += '      </select>';
+        html += '    </div>'; // row end
+
+        html += '    <div style="margin-top:8px;">';
+        html += '      <input class="m-search" id="mSearch" placeholder="모델 검색..." value="'+escapeHtml(state.q)+'" style="width:100%" />';
+        html += '    </div>';
+
+        html += '  </div>'; // m-top end
+
+        html += '  <div class="m-list">';
+        if (!filtered.length){
+          html += '    <div class="m-empty">검색 결과가 없습니다.</div>';
+        } else {
+          filtered.forEach(function(it){
+            var val = (it[state.carrier] && it[state.carrier][state.type]) ? it[state.carrier][state.type] : "";
+            var badges = detectBadges(val);
+            var valueClass = badges.neg ? "m-value neg" : "m-value";
+
+            html += '    <div class="m-card">';
+            html += '      <div class="m-card-head">';
+            html += '        <span>'+escapeHtml(it.model)+'</span>';
+            if (badges.stock) html += '        <span class="m-badge stock">재고/예약</span>';
+            else if (badges.neg) html += '        <span class="m-badge neg">특가</span>';
+            html += '      </div>';
+            html += '      <div class="m-card-body">';
+            html += '        <div class="m-label">'+escapeHtml(state.carrier+' '+(state.type==="MNP"?"이동":"기변"))+'</div>';
+            html += '        <div class="'+valueClass+'">'+escapeHtml(val || "-")+'</div>';
+            html += '      </div>';
+            html += '    </div>';
+          });
+        }
+        html += '  </div>'; // m-list end
+        html += '</div>'; // m-ui end
+
+        mount.innerHTML = html;
+
+        // Event Binding
+        mount.querySelectorAll(".m-tab").forEach(function(btn){
+          btn.addEventListener("click", function(){ state.carrier = btn.dataset.carrier; render(); });
+        });
+        mount.querySelectorAll(".m-btn").forEach(function(btn){
+          btn.addEventListener("click", function(){ state.type = btn.dataset.type; render(); });
+        });
+        var sel = mount.querySelector("#mSeries");
+        if(sel) sel.addEventListener("change", function(e){ state.series = e.target.value; render(); });
+        var inp = mount.querySelector("#mSearch");
+        if(inp) inp.addEventListener("input", function(e){ state.q = e.target.value; render(); });
       }
+
+      render();
     }
-  </script></div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-00sdlfb-1"><style>
-  :root{
-    --ink:#111827;
-    --muted:#6b7280;
-    --line:#e5e7eb;
-    --blue:#2563eb;
-    --dark:#111827;
-    --shadow:0 14px 34px rgba(17,24,39,.18);
-  }
-  body.modal-open{ overflow:hidden; }
 
-  /* ===== Floating FAB ===== */
-  .fabWrap{
-    position:fixed;
-    right:16px;
-    bottom:16px;
-    z-index:9998;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    align-items:flex-end;
-  }
-  .fabBtn{
-    appearance:none;
-    border:0;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:12px 14px;
-    border-radius:999px;
-    color:#fff;
-    box-shadow: var(--shadow);
-    font-weight:900;
-    font-size:14px;
-    line-height:1;
-    text-decoration:none;
-    transform: translateZ(0);
-  }
-  .fabBtn small{
-    font-weight:800;
-    opacity:.92;
-    font-size:12px;
-  }
-  .fabBtn .ico{
-    width:34px; height:34px;
-    border-radius:999px;
-    background:rgba(255,255,255,.18);
-    display:grid; place-items:center;
-    font-size:16px;
-  }
-  .fabBtn.kakao{ background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%); }
-  .fabBtn.visit{ background: linear-gradient(180deg, #1f2937 0%, #111827 100%); }
-
-  @media (max-width:520px){
-    .fabWrap{ right:12px; bottom:12px; }
-    .fabBtn{ padding:12px 12px; }
-    .fabBtn span.label{ display:none; } /* 모바일에서는 라벨 숨겨 깔끔하게 */
-  }
-
-  /* ===== Modal ===== */
-  .modalOverlay{
-    position:fixed; inset:0;
-    z-index:9999;
-    background:rgba(17,24,39,.62);
-    display:none;
-    padding:18px;
-    backdrop-filter: blur(6px);
-  }
-  .modalOverlay.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .modalBox{
-    width:min(980px, 100%);
-    max-height:min(92vh, 820px);
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow: 0 24px 60px rgba(0,0,0,.28);
-    display:flex;
-    flex-direction:column;
-  }
-  .modalHeader{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:10px;
-    padding:12px 12px;
-    border-bottom:1px solid var(--line);
-    background:linear-gradient(180deg,#fff 0%, #fafafa 100%);
-  }
-  .mhLeft{ display:flex; flex-direction:column; gap:2px; }
-  .modalTitle{ margin:0; font-size:14px; font-weight:900; color:var(--ink); }
-  .modalSub{ margin:0; font-size:12px; color:var(--muted); }
-
-  .mhRight{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
-  .miniBtn{
-    appearance:none;
-    border:1px solid var(--line);
-    background:#fff;
-    padding:8px 10px;
-    border-radius:999px;
-    font-weight:900;
-    font-size:12px;
-    cursor:pointer;
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    color:var(--ink);
-  }
-  .miniBtn.primary{
-    border-color: rgba(37,99,235,.25);
-    background: rgba(37,99,235,.08);
-    color:#1e3a8a;
-  }
-  .miniBtn.close{
-    background:#fff;
-  }
-  .miniBtn:active{ transform: translateY(1px); }
-
-  .modalBody{
-    flex:1;
-    background:#fff;
-  }
-  .modalFrame{
-    width:100%;
-    height:100%;
-    border:0;
-    display:block;
-  }
-
-  /* ===== Mobile fullscreen modal ===== */
-  @media (max-width:520px){
-    .modalOverlay{ padding:0; }
-    .modalBox{
-      width:100%;
-      height:100vh;
-      max-height:100vh;
-      border-radius:0;
+    function init(){
+      // PC에서도 일단 렌더링은 하지만 CSS로 숨김 처리함 (posterOnly vs mobileUI)
+      // 화면 너비 체크하여 실행
+      if(isMobile()) buildMobileUI();
     }
-    .mhRight{ gap:6px; }
-    .miniBtn{ padding:9px 10px; }
-  }
-</style></div>
-<div class="fabWrap" data-ez="module-15vm2oz-1" data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain">
-  <a class="fabBtn kakao" href="#" data-open-modal="kakaoModal" aria-label="카톡문의 열기">
-    <span class="ico">💬</span>
-    <span class="label">카톡문의 <small>바로 상담</small></span>
-  </a>
-  <a class="fabBtn visit" href="#" data-open-modal="visitModal" aria-label="방문예약 열기">
-    <span class="ico">📅</span>
-    <span class="label">방문예약 <small>시간 확정</small></span>
-  </a>
-</div>
-<div class="modalOverlay" id="kakaoModal" aria-hidden="true" data-ez="contents-1h4m19f-1">
-  <div class="modalBox" role="dialog" aria-modal="true" aria-label="카톡문의 모달">
-    <div class="modalHeader">
-      <div class="mhLeft">
-        <p class="modalTitle">카톡문의</p>
-        <p class="modalSub">상담 템플릿을 붙여넣고 바로 문의하세요.</p>
-      </div>
-      <div class="mhRight">
-        <button class="miniBtn primary" type="button" data-fill-template>
-          ✍️ 상담 템플릿 자동 입력
-        </button>
-        <button class="miniBtn close" type="button" data-close-modal>닫기 ✕</button>
-      </div>
-    </div>
-    <div class="modalBody">
-      <iframe class="modalFrame" id="kakaoFrame" src loading="lazy"></iframe>
-    </div>
-  </div>
-</div>
-<div class="modalOverlay" id="visitModal" aria-hidden="true" data-ez="contents-0znrwv7-1">
-  <div class="modalBox" role="dialog" aria-modal="true" aria-label="방문예약 모달">
-    <div class="modalHeader">
-      <div class="mhLeft">
-        <p class="modalTitle">방문예약</p>
-        <p class="modalSub">원하시는 날짜/시간으로 예약을 진행해주세요.</p>
-      </div>
-      <div class="mhRight">
-        <button class="miniBtn primary" type="button" data-fill-template>
-          ✍️ 상담 템플릿 자동 입력
-        </button>
-        <button class="miniBtn close" type="button" data-close-modal>닫기 ✕</button>
-      </div>
-    </div>
-    <div class="modalBody">
-      <iframe class="modalFrame" id="visitFrame" src loading="lazy"></iframe>
-    </div>
-  </div>
-</div>
-<div data-ez-module="user-defined/1" data-ez-name="USER DEFINED" data-ez-type="plain" data-ez="module-12z9lll-1"><script>
-  // ✅ 사용자가 준 링크 반영
-  const KAKAO_URL = "http://pf.kakao.com/_xmgiwn";        // 카톡문의
-  const VISIT_URL = "http://pf.kakao.com/_xmgiwn/chat";   // 방문예약(채팅)
 
-  // 템플릿(원하신 항목: 현재통신사/번이·기변/모델)
-  const CONSULT_TEMPLATE =
-`[상담요청 템플릿]
-1) 현재 통신사: (예: SK/KT/LG/알뜰)
-2) 진행 유형: (번호이동 / 기기변경)
-3) 원하는 모델/용량: (예: S25 울트라 256 / 아이폰17 PRO 256)
-4) 선호: (선약 / 공시 / 상관없음)
-5) 방문 가능 시간: (예: 오늘 6시 / 내일 오전)
-`;
-
-  const map = {
-    kakaoModal: { modalId: "kakaoModal", frameId: "kakaoFrame", url: KAKAO_URL },
-    visitModal: { modalId: "visitModal", frameId: "visitFrame", url: VISIT_URL }
-  };
-
-  function openModal(key){
-    const cfg = map[key];
-    if(!cfg) return;
-
-    const modal = document.getElementById(cfg.modalId);
-    const frame = document.getElementById(cfg.frameId);
-
-    // iframe 로드
-    frame.src = cfg.url;
-
-    modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.classList.add("modal-open");
-  }
-
-  function closeModal(modal){
-    modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("modal-open");
-
-    // 닫을 때 로딩 중지(선택)
-    const frame = modal.querySelector("iframe");
-    if(frame) frame.src = "";
-  }
-
-  // 플로팅 버튼 클릭 → 모달 열기
-  document.querySelectorAll("[data-open-modal]").forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      openModal(btn.getAttribute("data-open-modal"));
-    });
-  });
-
-  // 닫기 버튼
-  document.querySelectorAll("[data-close-modal]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const modal = btn.closest(".modalOverlay");
-      if(modal) closeModal(modal);
-    });
-  });
-
-  // 오버레이 바깥 클릭 닫기
-  document.querySelectorAll(".modalOverlay").forEach(modal => {
-    modal.addEventListener("click", (e) => {
-      if(e.target === modal) closeModal(modal);
-    });
-  });
-
-  // ESC 닫기
-  window.addEventListener("keydown", (e) => {
-    if(e.key !== "Escape") return;
-    const opened = document.querySelector(".modalOverlay.show");
-    if(opened) closeModal(opened);
-  });
-
-  // 템플릿 자동 입력: 클립보드에 복사 + 안내
-  async function copyTemplate(){
-    try{
-      await navigator.clipboard.writeText(CONSULT_TEMPLATE);
-      alert("상담 템플릿을 복사했어요!\n카톡/예약 화면 입력창에 붙여넣기 하시면 됩니다.");
-    }catch(err){
-      // fallback
-      const ta = document.createElement("textarea");
-      ta.value = CONSULT_TEMPLATE;
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand("copy");
-      document.body.removeChild(ta);
-      alert("상담 템플릿을 복사했어요!\n카톡/예약 화면 입력창에 붙여넣기 하시면 됩니다.");
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
     }
-  }
 
-  document.querySelectorAll("[data-fill-template]").forEach(btn => {
-    btn.addEventListener("click", copyTemplate);
-  });
-</script></div>
+    window.addEventListener("resize", function(){
+       if(isMobile()) buildMobileUI();
+       else document.getElementById("mobileUI").innerHTML = "";
+    });
+  })();
+  </script>
+</body>
+</html>
